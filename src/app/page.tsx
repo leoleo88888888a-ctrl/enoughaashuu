@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Video, ShieldCheck, Zap } from "lucide-react";
+import { Github } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
 import GeminiRemover from "@/components/GeminiRemover";
 
@@ -137,11 +137,17 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
         <p>aashuu ✦</p>
         <p className="mt-2 text-xs">
-          <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
+          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏</a>
           {" · "}
-          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@warrioraashuu</a>
-          {" · "}
-          <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
+          <a
+            href="https://github.com/codeaashu/RemoveBanana"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Repository"
+            className="hover:text-white transition-colors inline-flex items-center align-middle"
+          >
+            <Github className="w-4 h-4" />
+          </a>
         </p>
       </footer>
     </main>
