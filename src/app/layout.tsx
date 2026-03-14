@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif } from "next/font/google";
+import InstallAppPrompt from "../components/InstallAppPrompt";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: "/Banana.webp",
     shortcut: "/Banana.webp",
@@ -54,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className={instrumentSerif.variable}>
       <body className="antialiased">
         {children}
+        <InstallAppPrompt />
       </body>
     </html>
   );
