@@ -66,7 +66,7 @@ export default function GeminiRemover() {
             const resultDataUrl = await processGeminiImage(file);
             setResultUrl(resultDataUrl);
         } catch (err: any) {
-            console.error("Watermark removal error:", err);
+            console.error("RemoveBanana image processing error:", err);
             setError(err.message || 'An unexpected error occurred while processing the image.');
         } finally {
             setIsProcessing(false);
@@ -80,10 +80,10 @@ export default function GeminiRemover() {
                     <ImageIcon className="w-8 h-8 text-blue-400" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-                    Gemini <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Watermark Remover</span>
+                    🍌 RemoveBanana <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Gemini Image Tool</span>
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Drag and drop your Gemini-generated image here. Our tool extracts and reverses the invisible Google AI watermark mathematics directly in the browser.
+                    Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.
                 </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function GeminiRemover() {
 
                                     {/* Watermark identifier overlay simulation */}
                                     <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-red-500/30 text-xs font-mono text-red-300 opacity-60">
-                                        SyntID detected
+                                        SynthID detected
                                     </div>
                                 </div>
                             </div>
@@ -172,12 +172,12 @@ export default function GeminiRemover() {
                                         <div className="relative w-full h-full group">
                                             <img
                                                 src={resultUrl}
-                                                alt="Watermark removed"
+                                                alt="RemoveBanana result"
                                                 className="object-contain w-full h-full group-hover:scale-[1.02] transition-transform duration-700"
                                             />
                                             <div className="absolute inset-0 ring-4 ring-inset ring-green-500/20 pointer-events-none rounded-2xl" />
                                             <div className="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md px-3 py-1.5 rounded-lg border border-green-500/30 text-xs font-mono text-green-300 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
-                                                0% Watermark
+                                                Cleaned by RemoveBanana
                                             </div>
                                         </div>
                                     ) : isProcessing ? (
@@ -205,12 +205,12 @@ export default function GeminiRemover() {
                                     disabled={isProcessing}
                                     className="flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-2xl text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-blue-500/25 min-w-[200px]"
                                 >
-                                    {isProcessing ? "Processing..." : "Remove Watermark Now"}
+                                    {isProcessing ? "Processing..." : "Process with RemoveBanana"}
                                 </button>
                             ) : (
                                 <a
                                     href={resultUrl}
-                                    download="gemini-clean.png"
+                                    download="removebanana-gemini-clean.png"
                                     className="flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-2xl text-black bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-black transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] min-w-[200px] gap-2"
                                 >
                                     <Download className="w-5 h-5" /> Download High-Res

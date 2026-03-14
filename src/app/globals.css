@@ -28,6 +28,10 @@ body {
   background-attachment: fixed;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Glassmorphism utility class */
 .glass {
   background: var(--card-bg);

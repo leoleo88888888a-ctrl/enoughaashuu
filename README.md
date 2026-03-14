@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍌 RemoveBanana
 
-## Getting Started
+Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.
 
-First, run the development server:
+Website: https://removebanana.aashuu.tech/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Author: aashuu
+
+X: https://x.com/warrioraashuu/
+
+GitHub: https://github.com/codeaashu/RemoveBanana
+
+## What is this?
+
+Google's AI image generators (Gemini, Imagen 2, Imagen 3, Nano Banana) embed invisible SynthID watermarks into every generated image. These watermarks are invisible to the human eye but can be detected by automated systems.
+
+RemoveBanana uses the exact mathematical inverse of Google's alpha blending formula to perfectly reconstruct the original pixels, no AI guessing, no quality loss.
+
+```text
+Gemini adds:   watermarked = α × logo + (1 - α) × original
+We reverse it: original = (watermarked - α × logo) / (1 - α)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Current Codebase Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/page.tsx`: landing page, navigation, product tabs, and feature grid
+- `src/components/GeminiRemover.tsx`: Gemini image upload and browser-side processing UI
+- `src/components/SoraRemover.tsx`: Sora share-link extraction UI
+- `src/lib/watermark.ts`: browser-side watermark math and image processing helpers
+- `src/app/api/remove-gemini/route.ts`: server route using the `removebanana` package
+- `src/app/api/extract-sora/route.ts`: server route for extracting MP4 and prompt data from a public Sora share link
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Run Locally
 
-## Learn More
+```bash
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```

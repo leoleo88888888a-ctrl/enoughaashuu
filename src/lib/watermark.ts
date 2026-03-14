@@ -1,6 +1,6 @@
 /**
- * Ported RemoveBanana logic for client-side browser usage.
- * Based on https://github.com/removebanana/removebanana
+ * RemoveBanana browser-side watermark processing logic.
+ * Repository: https://github.com/codeaashu/RemoveBanana
  */
 
 // Constants from blendModes.js

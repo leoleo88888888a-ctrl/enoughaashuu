@@ -16,12 +16,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-fuchsia-500" />
-            <span className="font-bold text-xl tracking-tight">RemoveAI</span>
+            <span className="font-bold text-xl tracking-tight">🍌 RemoveBanana</span>
           </div>
           <div className="flex items-center gap-6 text-sm font-medium text-gray-400">
             <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-            <a href="https://github.com/removebanana/removebanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
-              <Code className="w-4 h-4" /> API
+            <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
+            <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
+            <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+              <Code className="w-4 h-4" /> GitHub
             </a>
           </div>
         </div>
@@ -45,7 +47,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
             </span>
-            Supports Gemini, Imagen 3, & Sora
+            Supports Gemini, Imagen 2, Imagen 3, Nano Banana, and Sora
           </motion.div>
 
           <motion.h1
@@ -54,9 +56,9 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight"
           >
-            Erase AI Watermarks <br />
+            🍌 RemoveBanana <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-fuchsia-400">
-              Mathematically.
+              Reverse Alpha Blending.
             </span>
           </motion.h1>
 
@@ -66,7 +68,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            The most advanced client-side AI watermark removal tool. Perfect extraction, zero quality loss, 100% privacy-first.
+            Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics. No AI guessing, no quality loss.
           </motion.p>
         </div>
       </section>
@@ -135,7 +137,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
-            <p className="text-gray-400">Industrial grade watermark processing for everyone.</p>
+            <p className="text-gray-400">Built as 🍌 RemoveBanana by aashuu for fast, direct watermark workflows.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +147,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Mathematical Precision</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We don't use AI to guess pixels. We mathematically reverse Google's alpha blending formula to perfectly reconstruct the original image.
+                RemoveBanana uses the exact inverse of Google's alpha blending formula to reconstruct the original pixels with precision.
               </p>
             </div>
 
@@ -155,7 +157,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">100% Secure & Private</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                All image processing happens directly on our servers without saving your files. No logs kept, complete privacy guaranteed.
+                Process your Gemini images fast with a clean product interface, direct file flow, and a focused experience for this tool.
               </p>
             </div>
 
@@ -165,7 +167,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Sora Raw Extraction</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We scrape OpenAI's backend to deliver the raw, un-watermarked MP4 file directly from their CDN, completely bypassing the GUI overlays.
+                The second workspace is designed for Sora share-link extraction and download flows inside the same RemoveBanana product.
               </p>
             </div>
           </div>
@@ -174,8 +176,14 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>© 2026 RemoveAI Watermark Remover. All rights reserved.</p>
-        <p className="mt-2 text-xs">A fast, secure, and privacy-first tool.</p>
+        <p>© 2026 🍌 RemoveBanana. Created by aashuu.</p>
+        <p className="mt-2 text-xs">
+          <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
+          {" · "}
+          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@warrioraashuu</a>
+          {" · "}
+          <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
+        </p>
       </footer>
     </main>
   );

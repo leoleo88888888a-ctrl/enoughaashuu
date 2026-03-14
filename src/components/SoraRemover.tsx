@@ -54,10 +54,10 @@ export default function SoraRemover() {
                     <Video className="w-8 h-8 text-fuchsia-400" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-                    Sora <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-600">Watermark Remover</span>
+                    🍌 RemoveBanana <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-600">Sora Tool</span>
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Paste your Sora share link below to extract the original prompt and download the clean, watermark-free MP4 video directly from OpenAI's CDN.
+                    Paste your Sora share link below to extract the original prompt and download the video through the RemoveBanana workflow.
                 </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function SoraRemover() {
                                 Extracting...
                             </>
                         ) : (
-                            "Remove Watermark"
+                            "Process with RemoveBanana"
                         )}
                     </button>
                 </form>
@@ -131,7 +131,7 @@ export default function SoraRemover() {
 
                                     <a
                                         href={result.mp4Url}
-                                        download="sora-clean-video.mp4"
+                                        download="removebanana-sora-video.mp4"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex flex-shrink-0 items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-black transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
@@ -158,7 +158,7 @@ export default function SoraRemover() {
                 </div>
                 <div>
                     <p className="font-semibold text-gray-300">3. Paste Here</p>
-                    <p className="text-sm text-gray-500 mt-1">Download clean video</p>
+                    <p className="text-sm text-gray-500 mt-1">Download with RemoveBanana</p>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
         if (!url.startsWith('https://sora.chatgpt.com/')) {
             return NextResponse.json(
-                { error: 'Invalid Sora URL. Please provide a URL starting with https://sora.chatgpt.com/' },
+                { error: 'RemoveBanana requires a Sora share URL starting with https://sora.chatgpt.com/' },
                 { status: 400 }
             );
         }
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
 
         if (!mp4Url) {
             return NextResponse.json(
-                { error: 'Failed to extract video from the provided link. Ensure it is a valid, public Sora share link.' },
+                { error: 'RemoveBanana could not extract a video from that link. Make sure it is a valid public Sora share link.' },
                 { status: 400 }
             );
         }
@@ -85,9 +85,9 @@ export async function POST(request: Request) {
         });
 
     } catch (error) {
-        console.error('Error extracting Sora info:', error);
+        console.error('RemoveBanana Sora extraction error:', error);
         return NextResponse.json(
-            { error: 'An error occurred while fetching the Sora video.' },
+            { error: 'RemoveBanana hit an error while fetching the Sora video.' },
             { status: 500 }
         );
     }
