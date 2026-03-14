@@ -43,16 +43,6 @@ export default function VideoRemoverPage() {
             <span className="bg-gradient-to-r from-fuchsia-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Watermarks
             </span>
-            <span className="inline-flex items-center justify-center">
-              {/* <Image
-                src="/Banana.webp"
-                alt="RemoveBanana logo"
-                width={56}
-                height={56}
-                className="h-[0.95em] w-[0.95em] rounded-xl object-cover"
-                priority
-              /> */}
-            </span>
           </motion.h1>
 
           <motion.p
@@ -86,47 +76,6 @@ export default function VideoRemoverPage() {
           <SoraRemover />
         </div>
       </section>
-
-      {/* <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
-            <p className="text-gray-400">Built as RemoveBanana by aashuu for fast, direct watermark workflows.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-8 rounded-3xl group hover:border-blue-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Zap className="w-7 h-7 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Fast Extraction</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Pull direct media URLs from share links quickly so you can preview and download in one flow.
-              </p>
-            </div>
-
-            <div className="glass p-8 rounded-3xl group hover:border-green-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-7 h-7 text-green-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Secure & Private</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                No account linking and no clutter. Paste the link, extract the source, and keep your workflow clean.
-              </p>
-            </div>
-
-            <div className="glass p-8 rounded-3xl group hover:border-fuchsia-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ImageIcon className="w-7 h-7 text-fuchsia-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Switch Any Time</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Use the same top navbar on both pages to jump between image remover and video remover instantly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
         <p>aashuu ✦</p>

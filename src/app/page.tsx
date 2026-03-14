@@ -28,14 +28,6 @@ export default function Home() {
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
               Remove
             </span>
-            {/* <Image
-              src="/Google.png"
-              alt="Google"
-              width={430}
-              height={96}
-              className="h-[0.9em] w-auto shrink-0 object-contain"
-              priority
-            /> */}
             <Image
               src="/Gemini.gif"
               alt="Gemini"
@@ -47,17 +39,6 @@ export default function Home() {
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
               Watermarks
             </span>
-            <span className="inline-flex items-center justify-center">
-              {/* <Image
-                src="/Banana.webp"
-                alt="RemoveBanana logo"
-                width={56}
-                height={56}
-                className="h-[0.95em] w-[0.95em] rounded-xl object-cover"
-                priority
-              /> */}
-            </span>
-
           </motion.h1>
 
           <motion.p
@@ -66,7 +47,9 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics. A 100% fast and secure, lossless solution completely in your browser.          </motion.p>
+            Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.
+            A fast, secure, and lossless workflow that runs directly in your browser.
+          </motion.p>
         </div>
         <div className="flex justify-center">
           <motion.div
@@ -90,48 +73,6 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
           <GeminiRemover />
         </div>
       </section>
-
-      {/* Features Grid */}
-      {/* <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
-            <p className="text-gray-400">Built as RemoveBanana by aashuu for fast, direct watermark workflows.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-8 rounded-3xl group hover:border-blue-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Zap className="w-7 h-7 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Mathematical Precision</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                RemoveBanana uses the exact inverse of Google&#39;s alpha blending formula to reconstruct the original pixels with precision.
-              </p>
-            </div>
-
-            <div className="glass p-8 rounded-3xl group hover:border-green-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-7 h-7 text-green-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">100% Secure & Private</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Process your Gemini images fast with a clean product interface, direct file flow, and a focused experience for this tool.
-              </p>
-            </div>
-
-            <div className="glass p-8 rounded-3xl group hover:border-fuchsia-500/30 transition-colors">
-              <div className="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Video className="w-7 h-7 text-fuchsia-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Sora Raw Extraction</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                The second workspace is designed for Sora share-link extraction and download flows inside the same RemoveBanana product.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">

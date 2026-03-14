@@ -131,7 +131,7 @@ function normalizedCrossCorrelation(a: Float32Array, b: Float32Array): number {
  * Extracts a grayscale region from ImageData.
  */
 function getRegionGrayscale(imageData: ImageData, region: Region): Float32Array {
-    const { width, height, data } = imageData;
+    const { width, data } = imageData;
     const size = region.width;
     const out = new Float32Array(size * size);
 

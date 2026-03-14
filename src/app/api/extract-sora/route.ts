@@ -1,93 +1,156 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+
+const SORA_UA =
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
+
+function extractFromHtml(html: string): { mp4Url: string; prompt: string } {
+    let mp4Url = "";
+    let prompt = "";
+
+    const metaVideoMatch = html.match(/<meta property="og:video" content="([^"]+)"/i);
+    if (metaVideoMatch?.[1]) {
+        mp4Url = metaVideoMatch[1];
+    } else {
+        const videoMatch = html.match(/"([^"]*\.mp4[^"]*)"/i);
+        if (videoMatch?.[1]) mp4Url = videoMatch[1];
+    }
+
+    mp4Url = mp4Url.replace(/\\u0026/g, "&");
+
+    const metaDescMatch = html.match(/<meta property="og:description" content="([^"]+)"/i);
+    if (metaDescMatch?.[1]) {
+        prompt = metaDescMatch[1].trim();
+    } else {
+        const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
+        if (titleMatch?.[1]) prompt = titleMatch[1].replace(/Sora/gi, "").trim();
+    }
+
+    prompt = prompt.replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+
+    return { mp4Url, prompt };
+}
+
+async function safeFetch(url: string): Promise<Response | null> {
+    try {
+        return await fetch(url, { headers: { "User-Agent": SORA_UA } });
+    } catch {
+        return null;
+    }
+}
 
 export async function POST(request: Request) {
     try {
-        const body = await request.json();
-        let url = body.url;
+        const body = (await request.json()) as { url?: string };
+        const url = body.url?.trim() ?? "";
 
         if (!url) {
+            return NextResponse.json({ error: "No URL provided." }, { status: 400 });
+        }
+
+        if (!url.startsWith("https://sora.chatgpt.com/")) {
             return NextResponse.json(
-                { error: 'No URL provided.' },
+                { error: "RemoveBanana requires a Sora URL starting with https://sora.chatgpt.com/." },
                 { status: 400 }
             );
         }
 
-        if (!url.startsWith('https://sora.chatgpt.com/')) {
-            return NextResponse.json(
-                { error: 'RemoveBanana requires a Sora share URL starting with https://sora.chatgpt.com/' },
-                { status: 400 }
-            );
-        }
+        let mp4Url = "";
+        let prompt = "";
 
-        // Fetch the raw HTML of the Sora page
-        const response = await fetch(url, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+        const genMatch = url.match(/\/g\/(gen_[a-zA-Z0-9]+)/);
+        if (genMatch) {
+            const genId = genMatch[1];
+            const apiRes = await safeFetch(`https://sora.chatgpt.com/backend-api/video/generations/${genId}`);
+
+            if (apiRes?.ok) {
+                try {
+                    const data = (await apiRes.json()) as Record<string, unknown>;
+                    mp4Url = typeof data.video_url === "string" ? data.video_url : typeof data.url === "string" ? data.url : "";
+                    prompt =
+                        typeof data.prompt === "string"
+                            ? data.prompt
+                            : typeof data.caption === "string"
+                                ? data.caption
+                                : "";
+                } catch {
+                    // Ignore non-JSON responses and fall back to HTML scraping.
+                }
             }
-        });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+            if (!mp4Url) {
+                const htmlRes = await safeFetch(url);
+                if (!htmlRes) {
+                    return NextResponse.json(
+                        { error: "Could not reach the Sora link. Verify the URL and try again." },
+                        { status: 400 }
+                    );
+                }
 
-        const html = await response.text();
+                if (!htmlRes.ok) {
+                    if (htmlRes.status === 401 || htmlRes.status === 403) {
+                        return NextResponse.json(
+                            {
+                                error:
+                                    "This /g/ link is private and requires login. Use Sora Share to create a public /p/ link.",
+                            },
+                            { status: 400 }
+                        );
+                    }
 
-        // The Sora video URL is typically embedded in the meta tags or script tags payload
-        let mp4Url = '';
-        let prompt = '';
+                    return NextResponse.json(
+                        { error: `Sora returned HTTP ${htmlRes.status}. Try using a public /p/ share link.` },
+                        { status: 400 }
+                    );
+                }
 
-        // 1. Try to extract MP4 URL
-        // Look for cdns that OpenAI uses for video or regular mp4 og:video tags
-        const videoUrlRegex = /"([^"]*\.mp4[^"]*)"/i;
-        const metaVideoRegex = /<meta property="og:video" content="([^"]+)"/i;
-
-        // We try looking for og:video first, as it's the standard way
-        const metaVideoMatch = html.match(metaVideoRegex);
-        if (metaVideoMatch && metaVideoMatch[1]) {
-            mp4Url = metaVideoMatch[1];
+                const html = await htmlRes.text();
+                ({ mp4Url, prompt } = extractFromHtml(html));
+            }
         } else {
-            // Fallback to searching for an mp4 url within the HTML
-            const videoMatch = html.match(videoUrlRegex);
-            if (videoMatch && videoMatch[1]) {
-                mp4Url = videoMatch[1];
+            const htmlRes = await safeFetch(url);
+            if (!htmlRes) {
+                return NextResponse.json(
+                    { error: "Could not reach the Sora link. Verify the URL and try again." },
+                    { status: 400 }
+                );
             }
-        }
 
-        // Unescape the URL if it's JSON encoded
-        mp4Url = mp4Url.replace(/\\u0026/g, '&');
+            if (!htmlRes.ok) {
+                if (htmlRes.status === 401 || htmlRes.status === 403) {
+                    return NextResponse.json(
+                        { error: "This link is private. Use Sora Share to generate a public /p/ link." },
+                        { status: 400 }
+                    );
+                }
 
-        // 2. Try to extract the prompt
-        // Look for og:description or title
-        const metaDescRegex = /<meta property="og:description" content="([^"]+)"/i;
-        const metaDescMatch = html.match(metaDescRegex);
-        if (metaDescMatch && metaDescMatch[1]) {
-            prompt = metaDescMatch[1].trim();
-        } else {
-            const titleRegex = /<title>([^<]+)<\/title>/i;
-            const titleMatch = html.match(titleRegex);
-            if (titleMatch && titleMatch[1]) {
-                prompt = titleMatch[1].replace('Sora', '').trim();
+                return NextResponse.json(
+                    { error: `Sora returned HTTP ${htmlRes.status}. Make sure the link is public.` },
+                    { status: 400 }
+                );
             }
-        }
 
-        prompt = prompt.replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+            const html = await htmlRes.text();
+            ({ mp4Url, prompt } = extractFromHtml(html));
+        }
 
         if (!mp4Url) {
             return NextResponse.json(
-                { error: 'RemoveBanana could not extract a video from that link. Make sure it is a valid public Sora share link.' },
+                {
+                    error:
+                        "Could not find a video in this link. For /g/ URLs, the generation may be private. Use a public /p/ share link.",
+                },
                 { status: 400 }
             );
         }
 
         return NextResponse.json({
-            prompt: prompt || 'Prompt not found.',
-            mp4Url: mp4Url
+            prompt: prompt || "Prompt not available.",
+            mp4Url,
         });
-
     } catch (error) {
-        console.error('RemoveBanana Sora extraction error:', error);
+        console.error("RemoveBanana Sora extraction error:", error);
         return NextResponse.json(
-            { error: 'RemoveBanana hit an error while fetching the Sora video.' },
+            { error: "An unexpected error occurred. Please try again with a valid public Sora link." },
             { status: 500 }
         );
     }

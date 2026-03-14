@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Download, X } from "lucide-react";
 
+const INSTALL_PROMPT_DISMISS_KEY = "removebanana-install-dismissed-until";
+const DISMISS_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
+
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
@@ -18,7 +21,14 @@ export default function InstallAppPrompt() {
 
     return standaloneMatch || iosStandalone;
   });
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(() => {
+    if (typeof window === "undefined") return false;
+
+    const dismissedUntilRaw = window.localStorage.getItem(INSTALL_PROMPT_DISMISS_KEY);
+    const dismissedUntil = dismissedUntilRaw ? Number(dismissedUntilRaw) : 0;
+
+    return Number.isFinite(dismissedUntil) && dismissedUntil > Date.now();
+  });
 
   const canShow = useMemo(() => !isInstalled && !isDismissed && deferredPrompt !== null, [isInstalled, isDismissed, deferredPrompt]);
 
@@ -43,6 +53,7 @@ export default function InstallAppPrompt() {
       setIsInstalled(true);
       setDeferredPrompt(null);
       setIsDismissed(false);
+      window.localStorage.removeItem(INSTALL_PROMPT_DISMISS_KEY);
     };
 
     window.addEventListener("beforeinstallprompt", onBeforeInstallPrompt);
@@ -67,6 +78,12 @@ export default function InstallAppPrompt() {
     setDeferredPrompt(null);
   };
 
+  const handleDismiss = () => {
+    const until = Date.now() + DISMISS_DURATION_MS;
+    window.localStorage.setItem(INSTALL_PROMPT_DISMISS_KEY, String(until));
+    setIsDismissed(true);
+  };
+
   if (!canShow) return null;
 
   return (
@@ -84,7 +101,7 @@ export default function InstallAppPrompt() {
 
         <button
           type="button"
-          onClick={() => setIsDismissed(true)}
+          onClick={handleDismiss}
           className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
           aria-label="Close install prompt"
         >
