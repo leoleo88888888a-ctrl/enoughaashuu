@@ -41,17 +41,17 @@ export default function VideoRemoverPage() {
               />
             </motion.div>
             <span className="bg-gradient-to-r from-fuchsia-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Sora Video Marks
+              Watermarks
             </span>
             <span className="inline-flex items-center justify-center">
-              <Image
+              {/* <Image
                 src="/Banana.webp"
                 alt="RemoveBanana logo"
                 width={56}
                 height={56}
                 className="h-[0.95em] w-[0.95em] rounded-xl object-cover"
                 priority
-              />
+              /> */}
             </span>
           </motion.h1>
 
