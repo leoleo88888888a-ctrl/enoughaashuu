@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
         if (!url.startsWith('https://sora.chatgpt.com/')) {
             return NextResponse.json(
-                { error: 'RemoveBanana requires a Sora share URL starting with https://sora.chatgpt.com/' },
+                { error: 'FuckWatermarks requires a Sora share URL starting with https://sora.chatgpt.com/' },
                 { status: 400 }
             );
         }
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
 
         if (!mp4Url) {
             return NextResponse.json(
-                { error: 'RemoveBanana could not extract a video from that link. Make sure it is a valid public Sora share link.' },
+                { error: 'FuckWatermarks could not extract a video from that link. Make sure it is a valid public Sora share link.' },
                 { status: 400 }
             );
         }
@@ -85,9 +85,9 @@ export async function POST(request: Request) {
         });
 
     } catch (error) {
-        console.error('RemoveBanana Sora extraction error:', error);
+        console.error('FuckWatermarks Sora extraction error:', error);
         return NextResponse.json(
-            { error: 'RemoveBanana hit an error while fetching the Sora video.' },
+            { error: 'FuckWatermarks hit an error while fetching the Sora video.' },
             { status: 500 }
         );
     }

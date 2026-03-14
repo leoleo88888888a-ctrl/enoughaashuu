@@ -10,11 +10,11 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://removebanana.aashuu.tech"),
-  title: "RemoveBanana",
+  metadataBase: new URL("https://fuckwatermarks.aashuu.tech"),
+  title: "FuckWatermarks",
   description:
     "Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.",
-  applicationName: "RemoveBanana",
+  applicationName: "FuckWatermarks",
   authors: [{ name: "aashuu", url: "https://x.com/warrioraashuu/" }],
   creator: "aashuu",
   publisher: "aashuu",
@@ -22,26 +22,26 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/Banana.webp",
-    shortcut: "/Banana.webp",
-    apple: "/Banana.webp",
+    icon: "/ghost.webp",
+    shortcut: "/ghost.webp",
+    apple: "/ghost.webp",
   },
   openGraph: {
-    title: "RemoveBanana",
+    title: "FuckWatermarks",
     description:
       "Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.",
-    url: "https://removebanana.aashuu.tech/",
-    siteName: "RemoveBanana",
+    url: "https://fuckwatermarks.aashuu.tech/",
+    siteName: "FuckWatermarks",
     type: "website",
-    images: ["/Banana.webp"],
+    images: ["/ghost.webp"],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@warrioraashuu",
-    title: "RemoveBanana",
+    title: "FuckWatermarks",
     description:
       "Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.",
-    images: ["/Banana.webp"],
+    images: ["/ghost.webp"],
   },
 };
 

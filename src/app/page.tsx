@@ -17,20 +17,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/Banana.webp"
-              alt="RemoveBanana logo"
+              src="/ghost.webp"
+              alt="FuckWatermarks logo"
               width={28}
               height={28}
               className="h-7 w-7 rounded-md"
               priority
             />
-            <span className="font-bold text-xl tracking-tight">RemoveBanana</span>
+            <span className="font-bold text-xl tracking-tight">FuckWatermarks</span>
           </div>
           <div className="flex items-center gap-6 text-sm font-medium text-gray-400">
             <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-            <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
+            <a href="https://fuckwatermarks.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
             <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
-            <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+            <a href="https://github.com/codeaashu/FuckWatermarks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
               <Code className="w-4 h-4" /> GitHub
             </a>
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
             </span>
-            Supports Gemini, Imagen 2, Imagen 3, Nano Banana, and Sora
+            Supported Models: Google Gemini Advanced, Imagen 2, Imagen 3, Nano Banana AI
           </motion.div>
 
           <motion.h1
@@ -88,8 +88,8 @@ export default function Home() {
             </span>
             <span className="inline-flex items-center justify-center">
               <Image
-                src="/Banana.webp"
-                alt="RemoveBanana logo"
+                src="/ghost.webp"
+                alt="FuckWatermarks logo"
                 width={56}
                 height={56}
                 className="h-[0.95em] w-[0.95em] rounded-xl object-cover"
@@ -105,8 +105,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics. No AI guessing, no quality loss.
-          </motion.p>
+Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics. A 100% fast and secure, lossless solution completely in your browser.          </motion.p>
         </div>
       </section>
 
@@ -174,7 +173,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
-            <p className="text-gray-400">Built as RemoveBanana by aashuu for fast, direct watermark workflows.</p>
+            <p className="text-gray-400">Built as FuckWatermarks by aashuu for fast, direct watermark workflows.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -184,7 +183,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Mathematical Precision</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                RemoveBanana uses the exact inverse of Google's alpha blending formula to reconstruct the original pixels with precision.
+                FuckWatermarks uses the exact inverse of Google's alpha blending formula to reconstruct the original pixels with precision.
               </p>
             </div>
 
@@ -204,7 +203,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Sora Raw Extraction</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                The second workspace is designed for Sora share-link extraction and download flows inside the same RemoveBanana product.
+                The second workspace is designed for Sora share-link extraction and download flows inside the same FuckWatermarks product.
               </p>
             </div>
           </div>
@@ -213,13 +212,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>© 2026 RemoveBanana. Created by aashuu.</p>
+        <p>© 2026 FuckWatermarks. Created by aashuu.</p>
         <p className="mt-2 text-xs">
-          <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
+          <a href="https://fuckwatermarks.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">fuckwatermarks.aashuu.tech</a>
           {" · "}
           <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@warrioraashuu</a>
           {" · "}
-          <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
+          <a href="https://github.com/codeaashu/FuckWatermarks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
         </p>
       </footer>
     </main>

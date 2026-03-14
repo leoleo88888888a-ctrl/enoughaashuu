@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
     const buffer = Buffer.from(await image.arrayBuffer());
 
-    console.log('RemoveBanana: processing Gemini image...');
+    console.log('FuckWatermarks: processing Gemini image...');
 
     // Remove the watermark using the canvas library under the hood
     const result = await removeWatermarkFromBuffer(buffer, {
@@ -33,14 +33,14 @@ export async function POST(request: Request) {
     return new NextResponse(new Uint8Array(result.buffer), {
       headers: {
         'Content-Type': 'image/png',
-        'Content-Disposition': 'attachment; filename="removebanana-clean-image.png"',
+        'Content-Disposition': 'attachment; filename="fuckwatermarks-clean-image.png"',
       },
     });
 
   } catch (error: any) {
-    console.error('RemoveBanana Gemini processing error:', error);
+    console.error('FuckWatermarks Gemini processing error:', error);
     return NextResponse.json(
-      { error: error.message || 'RemoveBanana could not process the image. Make sure it is a valid Gemini, Imagen, or Nano Banana image.' },
+      { error: error.message || 'FuckWatermarks could not process the image. Make sure it is a valid Gemini, Imagen, or Nano Banana image.' },
       { status: 500 }
     );
   }

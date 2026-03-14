@@ -57,19 +57,19 @@ export default function SoraRemover() {
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
                     <span className="inline-flex items-center gap-3">
                         <Image
-                            src="/Banana.webp"
-                            alt="RemoveBanana logo"
+                            src="/ghost.webp"
+                            alt="FuckWatermarks logo"
                             width={44}
                             height={44}
                             className="h-10 w-10 rounded-lg"
                             priority
                         />
-                        RemoveBanana
+                        FuckWatermarks
                     </span>{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-600">Sora Tool</span>
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Paste your Sora share link below to extract the original prompt and download the video through the RemoveBanana workflow.
+                    Paste your Sora share link below to extract the original prompt and download the video through the FuckWatermarks workflow.
                 </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function SoraRemover() {
                                 Extracting...
                             </>
                         ) : (
-                            "Process with RemoveBanana"
+                            "Process with FuckWatermarks"
                         )}
                     </button>
                 </form>
@@ -143,7 +143,7 @@ export default function SoraRemover() {
 
                                     <a
                                         href={result.mp4Url}
-                                        download="removebanana-sora-video.mp4"
+                                        download="fuckwatermarks-sora-video.mp4"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex flex-shrink-0 items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-black transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
@@ -170,7 +170,7 @@ export default function SoraRemover() {
                 </div>
                 <div>
                     <p className="font-semibold text-gray-300">3. Paste Here</p>
-                    <p className="text-sm text-gray-500 mt-1">Download with RemoveBanana</p>
+                    <p className="text-sm text-gray-500 mt-1">Download with FuckWatermarks</p>
                 </div>
             </div>
         </div>
