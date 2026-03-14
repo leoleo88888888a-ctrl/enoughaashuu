@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Image as ImageIcon, Video, Github } from "lucide-react";
+import { Image as ImageIcon, Video, Github, Twitter } from "lucide-react";
 
 export default function TopNavbar() {
   const pathname = usePathname();
@@ -63,9 +63,9 @@ export default function TopNavbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X"
-            className="hover:text-white transition-colors text-base leading-none"
+            className="hover:text-white transition-colors flex items-center"
           >
-            𝕏
+            <Twitter className="w-4 h-4" />
           </a>
           <a
             href="https://github.com/codeaashu/RemoveBanana"

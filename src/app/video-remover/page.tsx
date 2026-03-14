@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
 import SoraRemover from "@/components/SoraRemover";
 
@@ -76,7 +76,7 @@ export default function VideoRemoverPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
             </span>
-            Supported Models: OpenAI Sora • Sora 2 • ChatGPT Sora
+            Supports: OpenAI Sora • Sora 2 • ChatGPT Sora
           </motion.div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function VideoRemoverPage() {
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
         <p>aashuu ✦</p>
         <p className="mt-2 text-xs">
-          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">𝕏</a>
+          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:text-white transition-colors inline-flex items-center align-middle"><Twitter className="w-4 h-4" /></a>
           {" · "}
           <a
             href="https://github.com/codeaashu/RemoveBanana"
