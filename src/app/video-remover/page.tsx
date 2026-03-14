@@ -129,7 +129,7 @@ export default function VideoRemoverPage() {
       </section> */}
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>© 2026 RemoveBanana. Created by aashuu.</p>
+        <p>aashuu ✦</p>
         <p className="mt-2 text-xs">
           <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
           {" · "}
