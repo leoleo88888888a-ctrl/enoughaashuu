@@ -12,8 +12,8 @@ export default function TopNavbar() {
 
   return (
     <nav className="fixed top-0 w-full border-b border-white/5 bg-black/50 backdrop-blur-xl z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center gap-3">
-        <div className="order-1 flex items-center gap-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 grid grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-2 min-w-0">
           <Image
             src="/Banana.webp"
             alt="RemoveBanana logo"
@@ -22,10 +22,10 @@ export default function TopNavbar() {
             className="h-7 w-7 rounded-md"
             priority
           />
-          <span className="font-bold text-xl tracking-tight">RemoveBanana</span>
+          <span className="hidden min-[460px]:inline font-bold text-lg sm:text-xl tracking-tight whitespace-nowrap">RemoveBanana</span>
         </div>
 
-        <div className="order-3 basis-full flex justify-center md:order-2 md:basis-auto md:mx-auto">
+        <div className="flex justify-center min-w-0">
           <div className="inline-flex p-1.5 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10">
             <Link
               href="/"
@@ -57,7 +57,7 @@ export default function TopNavbar() {
           </div>
         </div>
 
-        <div className="order-2 ml-auto flex items-center gap-3 sm:gap-5 text-sm font-medium text-gray-400 md:order-3 md:ml-0">
+        <div className="flex items-center justify-end gap-3 sm:gap-5 text-sm font-medium text-gray-400">
           <a
             href="https://x.com/warrioraashuu/"
             target="_blank"

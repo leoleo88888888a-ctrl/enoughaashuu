@@ -50,28 +50,6 @@ export default function SoraRemover() {
 
     return (
         <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
-            <div className="text-center mb-10">
-                <div className="inline-flex items-center justify-center p-3 bg-fuchsia-500/10 rounded-2xl mb-4 border border-fuchsia-500/20">
-                    <Video className="w-8 h-8 text-fuchsia-400" />
-                </div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-                    <span className="inline-flex items-center gap-3">
-                        <Image
-                            src="/Banana.webp"
-                            alt="RemoveBanana logo"
-                            width={44}
-                            height={44}
-                            className="h-10 w-10 rounded-lg"
-                            priority
-                        />
-                        RemoveBanana
-                    </span>{" "}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-600">Sora Tool</span>
-                </h2>
-                <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Paste your Sora share link below to extract the original prompt and download the video through the RemoveBanana workflow.
-                </p>
-            </div>
 
             <div className="w-full glass rounded-3xl p-6 md:p-8">
                 <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 relative z-10">
@@ -159,7 +137,7 @@ export default function SoraRemover() {
             </div>
 
             {/* Help section */}
-            <div className="mt-12 w-full max-w-2xl text-center grid grid-cols-1 md:grid-cols-3 gap-6 opacity-70">
+            {/* <div className="mt-12 w-full max-w-2xl text-center grid grid-cols-1 md:grid-cols-3 gap-6 opacity-70">
                 <div>
                     <p className="font-semibold text-gray-300">1. Open Sora</p>
                     <p className="text-sm text-gray-500 mt-1">Found a video you like</p>
@@ -172,7 +150,7 @@ export default function SoraRemover() {
                     <p className="font-semibold text-gray-300">3. Paste Here</p>
                     <p className="text-sm text-gray-500 mt-1">Download with RemoveBanana</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

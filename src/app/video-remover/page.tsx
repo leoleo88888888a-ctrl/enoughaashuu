@@ -61,7 +61,7 @@ export default function VideoRemoverPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Extract clean video output from Sora share links with a focused workflow built for speed, privacy, and easy downloads.
+            Remove invisible AI watermarks from Sora AI-generated videos. Paste your Sora share link to extract the original prompt and download the clean MP4 using reverse alpha blending mathematics. A 100% fast and secure, lossless solution completely in your browser.
           </motion.p>
         </div>
 
@@ -76,7 +76,7 @@ export default function VideoRemoverPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
             </span>
-            Supported Source: Sora Share Links
+            Supported Models: OpenAI Sora • Sora 2 • ChatGPT Sora
           </motion.div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function VideoRemoverPage() {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
+      {/* <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
@@ -126,7 +126,7 @@ export default function VideoRemoverPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
         <p>© 2026 RemoveBanana. Created by aashuu.</p>

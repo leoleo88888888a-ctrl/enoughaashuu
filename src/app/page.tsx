@@ -79,7 +79,7 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
             </span>
-            Supported Models: Google Gemini Advanced, Imagen 2, Imagen 3, Nano Banana AI
+            Supported Models: Gemini Advanced • Imagen 2 • Imagen 3 • Nano Banana
           </motion.div>
         </div>
       </section>
@@ -92,7 +92,7 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
       </section>
 
       {/* Features Grid */}
-      <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
+      {/* <section id="how-it-works" className="py-24 border-t border-white/5 bg-black/40 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
@@ -131,11 +131,11 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>© 2026 RemoveBanana. Created by aashuu.</p>
+        <p>aashuu ✦</p>
         <p className="mt-2 text-xs">
           <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
           {" · "}
