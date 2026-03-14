@@ -17,20 +17,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/ghost.webp"
-              alt="FuckWatermarks logo"
+              src="/Banana.webp"
+              alt="RemoveBanana logo"
               width={28}
               height={28}
               className="h-7 w-7 rounded-md"
               priority
             />
-            <span className="font-bold text-xl tracking-tight">FuckWatermarks</span>
+            <span className="font-bold text-xl tracking-tight">RemoveBanana</span>
           </div>
           <div className="flex items-center gap-6 text-sm font-medium text-gray-400">
             <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-            <a href="https://fuckwatermarks.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
+            <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
             <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
-            <a href="https://github.com/codeaashu/FuckWatermarks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+            <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
               <Code className="w-4 h-4" /> GitHub
             </a>
           </div>
@@ -88,8 +88,8 @@ export default function Home() {
             </span>
             <span className="inline-flex items-center justify-center">
               <Image
-                src="/ghost.webp"
-                alt="FuckWatermarks logo"
+                src="/Banana.webp"
+                alt="RemoveBanana logo"
                 width={56}
                 height={56}
                 className="h-[0.95em] w-[0.95em] rounded-xl object-cover"
@@ -173,7 +173,7 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose Us?</h2>
-            <p className="text-gray-400">Built as FuckWatermarks by aashuu for fast, direct watermark workflows.</p>
+            <p className="text-gray-400">Built as RemoveBanana by aashuu for fast, direct watermark workflows.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -183,7 +183,7 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
               </div>
               <h3 className="text-xl font-bold mb-3">Mathematical Precision</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                FuckWatermarks uses the exact inverse of Google's alpha blending formula to reconstruct the original pixels with precision.
+                RemoveBanana uses the exact inverse of Google's alpha blending formula to reconstruct the original pixels with precision.
               </p>
             </div>
 
@@ -203,7 +203,7 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
               </div>
               <h3 className="text-xl font-bold mb-3">Sora Raw Extraction</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                The second workspace is designed for Sora share-link extraction and download flows inside the same FuckWatermarks product.
+                The second workspace is designed for Sora share-link extraction and download flows inside the same RemoveBanana product.
               </p>
             </div>
           </div>
@@ -212,13 +212,13 @@ Remove invisible AI watermarks from Google Gemini-generated images using reverse
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>© 2026 FuckWatermarks. Created by aashuu.</p>
+        <p>© 2026 RemoveBanana. Created by aashuu.</p>
         <p className="mt-2 text-xs">
-          <a href="https://fuckwatermarks.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">fuckwatermarks.aashuu.tech</a>
+          <a href="https://removebanana.aashuu.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">removebanana.aashuu.tech</a>
           {" · "}
           <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@warrioraashuu</a>
           {" · "}
-          <a href="https://github.com/codeaashu/FuckWatermarks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
+          <a href="https://github.com/codeaashu/RemoveBanana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
         </p>
       </footer>
     </main>

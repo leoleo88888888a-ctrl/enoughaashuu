@@ -1,22 +1,22 @@
-![FuckWatermarks Logo](public/ghost.webp)
+![RemoveBanana Logo](public/Banana.webp)
 
-# FuckWatermarks
+# RemoveBanana
 
 Remove invisible AI watermarks from Google Gemini-generated images using reverse alpha blending mathematics.
 
-Website: https://fuckwatermarks.aashuu.tech/
+Website: https://removebanana.aashuu.tech/
 
 Author: aashuu
 
 X: https://x.com/warrioraashuu/
 
-GitHub: https://github.com/codeaashu/FuckWatermarks
+GitHub: https://github.com/codeaashu/RemoveBanana
 
 ## What is this?
 
 Google's AI image generators (Gemini, Imagen 2, Imagen 3, Nano Banana) embed invisible SynthID watermarks into every generated image. These watermarks are invisible to the human eye but can be detected by automated systems.
 
-FuckWatermarks uses the exact mathematical inverse of Google's alpha blending formula to perfectly reconstruct the original pixels, no AI guessing, no quality loss.
+RemoveBanana uses the exact mathematical inverse of Google's alpha blending formula to perfectly reconstruct the original pixels, no AI guessing, no quality loss.
 
 ```text
 Gemini adds:   watermarked = α × logo + (1 - α) × original

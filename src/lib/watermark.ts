@@ -1,6 +1,6 @@
 /**
- * FuckWatermarks browser-side watermark processing logic.
- * Repository: https://github.com/codeaashu/FuckWatermarks
+ * RemoveBanana browser-side watermark processing logic.
+ * Repository: https://github.com/codeaashu/RemoveBanana
  */
 
 // Constants from blendModes.js
