@@ -51,7 +51,20 @@ export default function Home() {
             A fast, secure, and lossless workflow that runs directly in your browser.
           </motion.p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center">
+          <a
+            href="https://peerlist.io/aashuu/project/removebanana"
+            target="_blank"
+            rel="noreferrer"
+            className="mb-4"
+            aria-label="RemoveBanana on Peerlist"
+          >
+            <img
+              src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
+              alt="RemoveBanana"
+              style={{ width: "auto", height: "72px" }}
+            />
+          </a>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
