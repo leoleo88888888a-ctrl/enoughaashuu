@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Twitter } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
 import GeminiRemover from "@/components/GeminiRemover";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -178,23 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
-        <p>aashuu ✦</p>
-        <div className="mt-2 flex items-center justify-center gap-1 text-xs">
-          <a href="https://x.com/warrioraashuu/" target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:text-white transition-colors inline-flex items-center p-2"><Twitter className="w-4 h-4" /></a>
-          <span className="w-px h-4 bg-white/20" />
-          <a
-            href="https://github.com/codeaashu/RemoveBanana"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub Repository"
-            className="hover:text-white transition-colors inline-flex items-center p-2"
-          >
-            <Github className="w-4 h-4" />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

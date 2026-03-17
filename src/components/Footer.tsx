@@ -1,0 +1,93 @@
+"use client";
+
+import Link from "next/link";
+import { Github, Twitter } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-white/5 py-12 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Product</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">
+                  Remove Watermark
+                </Link>
+              </li>
+              <li>
+                <Link href="/video-remover" className="hover:text-white transition-colors">
+                  Video Remover
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-of-service" className="hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Follow</h4>
+            <div className="flex gap-3">
+              <a
+                href="https://x.com/warrioraashuu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/codeaashu/RemoveBanana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/5 pt-8 text-center text-sm text-gray-500">
+          <p>© 2025 RemoveBanana by aashuu ✦</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
