@@ -87,6 +87,97 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-6 pb-28">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.45 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-[clamp(2rem,5vw,3.6rem)] font-semibold tracking-tight text-white">
+              Pixel-Perfect Results
+            </h2>
+            <p className="mt-3 text-base md:text-2xl text-gray-400">
+              See the difference. Zero quality loss, mathematically reversed pixels.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 items-start">
+            <motion.figure
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45 }}
+              className="mx-auto w-full max-w-[460px]"
+            >
+              <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-white/5">
+                <span className="absolute top-4 left-4 z-10 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold tracking-wide text-white">
+                  BEFORE
+                </span>
+                <Image
+                  src="/NanoBanana.png"
+                  alt="Original Gemini image with embedded alpha watermark"
+                  width={768}
+                  height={768}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+              <figcaption className="mt-4 text-center text-sm md:text-lg text-gray-400">
+                Original Gemini image with embedded alpha-watermark.
+              </figcaption>
+            </motion.figure>
+
+            <div className="hidden lg:flex items-center justify-center pt-48">
+              <div className="h-16 w-16 rounded-full bg-blue-500/15 border border-blue-400/30 grid place-items-center text-3xl text-blue-300">
+                →
+              </div>
+            </div>
+
+            <motion.figure
+              initial={{ opacity: 0, x: 16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45 }}
+              className="mx-auto w-full max-w-[460px]"
+            >
+              <div className="relative rounded-3xl overflow-hidden border border-blue-400/40 bg-white/5">
+                <span className="absolute top-4 right-4 z-10 rounded-full bg-blue-600/90 px-3 py-1 text-xs font-semibold tracking-wide text-white">
+                  CLEANED
+                </span>
+                <Image
+                  src="/removebanana.png"
+                  alt="Watermark removed output from RemoveBanana"
+                  width={768}
+                  height={768}
+                  className="h-auto w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                  <motion.div
+                    className="absolute inset-x-0 h-14 mix-blend-screen"
+                    initial={{ top: "-14%", opacity: 0.78 }}
+                    animate={{ top: ["-14%", "100%"], opacity: [0.78, 1, 0.86] }}
+                    transition={{
+                      top: { duration: 1.75, repeat: Infinity, repeatDelay: 0.12, ease: "linear" },
+                      opacity: { duration: 0.22, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" },
+                    }}
+                  >
+                    <div className="h-full w-full bg-gradient-to-b from-transparent via-blue-300/25 to-transparent" />
+                    <div className="absolute inset-x-0 top-1/2 h-8 -translate-y-1/2 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent blur-md" />
+                    <div className="absolute inset-x-0 top-1/2 h-[2px] -translate-y-1/2 bg-blue-300 shadow-[0_0_30px_rgba(96,165,250,1)]" />
+                    <div className="absolute inset-x-0 top-1/2 h-px -translate-y-[3px] bg-blue-100/80" />
+                  </motion.div>
+                </div>
+              </div>
+              <figcaption className="mt-4 text-center text-sm md:text-lg text-gray-400">
+                100% losslessly cleaned output ready for use.
+              </figcaption>
+            </motion.figure>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500">
         <p>aashuu ✦</p>
