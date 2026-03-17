@@ -26,9 +26,9 @@ export default function RemoveGeminiWatermarkBlog() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
-              How to Remove Gemini Watermark from AI Images (2025 Guide)
+              How to Remove Gemini Watermark from AI Images (2026 Guide)
             </h1>
-            <p className="text-gray-400 mb-8">Published March 2025 · 8 min read</p>
+            <p className="text-gray-400 mb-8">Published March 2026 · 8 min read</p>
 
             <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
               <p className="text-lg">
@@ -131,7 +131,7 @@ export default function RemoveGeminiWatermarkBlog() {
       </section>
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2025 RemoveBanana by aashuu ✦</p>
+        <p>© 2026 RemoveBanana by aashuu ✦</p>
       </footer>
     </main>
   );

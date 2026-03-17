@@ -18,7 +18,7 @@ export default function TermsOfService() {
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
               Terms of Service
             </h1>
-            <p className="text-gray-400 mb-8">Last updated: March 2025</p>
+            <p className="text-gray-400 mb-8">Last updated: March 2026</p>
 
             <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
               <section>
@@ -103,7 +103,7 @@ export default function TermsOfService() {
       </section>
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2025 RemoveBanana by aashuu ✦</p>
+        <p>© 2026 RemoveBanana by aashuu ✦</p>
       </footer>
     </main>
   );

@@ -28,7 +28,7 @@ export default function RemoveSoraWatermarkBlog() {
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
               How to Remove Sora Watermark & Download Videos Without Watermark (2026)
             </h1>
-            <p className="text-gray-400 mb-8">Published March 2025 · 7 min read</p>
+            <p className="text-gray-400 mb-8">Published March 2026 · 7 min read</p>
 
             <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
               <p className="text-lg">
@@ -170,7 +170,7 @@ export default function RemoveSoraWatermarkBlog() {
       </section>
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2025 RemoveBanana by aashuu ✦</p>
+        <p>© 2026 RemoveBanana by aashuu ✦</p>
       </footer>
     </main>
   );

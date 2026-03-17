@@ -109,7 +109,7 @@ export default function Contact() {
       </section>
 
       <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2025 RemoveBanana by aashuu ✦</p>
+        <p>© 2026 RemoveBanana by aashuu ✦</p>
       </footer>
     </main>
   );
