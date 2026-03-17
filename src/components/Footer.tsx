@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 text-center text-sm text-gray-500">
-          <p>© 2025 RemoveBanana by aashuu ✦</p>
+          <p>© 2026 RemoveBanana by aashuu ✦</p>
         </div>
       </div>
     </footer>
