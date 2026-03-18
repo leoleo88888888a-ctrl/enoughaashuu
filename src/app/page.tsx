@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Image as ImageIcon, Video, Eraser, Brain, QrCode, Sparkles } from "lucide-react";
+import { Image as ImageIcon, Video, Eraser, Brain, QrCode } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
@@ -224,8 +224,15 @@ export default function LandingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
-              {tools.map((tool) => (
-                <Link key={tool.name} href={tool.href}>
+              {tools.map((tool, index) => {
+                const isOddLastCard = tools.length % 2 === 1 && index === tools.length - 1;
+
+                return (
+                <Link
+                  key={tool.name}
+                  href={tool.href}
+                  className={`block w-full ${isOddLastCard ? "md:col-span-2 md:mx-auto md:max-w-[calc(50%-1rem)]" : ""}`}
+                >
                   <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 hover:bg-white/[0.08] transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] hover:border-white/20 h-full flex flex-col justify-between">
                     <div className="absolute -top-10 -right-10 p-6 opacity-[0.03] group-hover:opacity-10 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 pointer-events-none">
                       <tool.icon className="w-64 h-64" />
@@ -247,33 +254,9 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </Link>
-              ))}
+              );
+              })}
             </div>
-
-            <Link href="/qr-code-generator" className="mt-8 block">
-              <div className="group relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-sky-500/10 p-7 md:p-8 transition-all duration-300 hover:border-cyan-300/40 hover:shadow-[0_24px_44px_-18px_rgba(6,182,212,0.45)]">
-                <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute -left-16 -bottom-16 h-44 w-44 rounded-full bg-blue-500/20 blur-3xl transition-transform duration-500 group-hover:scale-110" />
-
-                <div className="relative z-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/30 bg-cyan-500/20 px-3 py-1 text-xs font-semibold tracking-wide text-cyan-100">
-                      <Sparkles className="h-3.5 w-3.5" />
-                      NEW FEATURE
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">Generate Beautiful QR Codes</h3>
-                    <p className="mt-2 max-w-2xl text-sm md:text-base text-cyan-100/80">
-                      Build QR codes for URLs, Wi-Fi, vCard, Event, Phone, SMS, and Geo with logo upload, randomize, and one-click export.
-                    </p>
-                  </div>
-
-                  <div className="inline-flex items-center gap-2 self-start rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition-colors group-hover:bg-white/20 md:self-auto">
-                    <QrCode className="h-4 w-4" />
-                    Open QR Generator
-                  </div>
-                </div>
-              </div>
-            </Link>
           </motion.div>
         </div>
       </section>
