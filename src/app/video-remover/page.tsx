@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, Twitter } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
 import SoraRemover from "@/components/SoraRemover";
 import Footer from "@/components/Footer";

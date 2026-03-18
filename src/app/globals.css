@@ -76,3 +76,22 @@ a {
   background-color: var(--primary);
   color: white;
 }
+
+/* Animated Gradient Animation - Smooth Background Position Shift */
+@keyframes smoothGradient {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(90deg, #ef4444, #fbbf24, #f97316, #ec4899, #a855f7, #ef4444);
+  background-size: 200% 100%;
+  animation: smoothGradient 10s ease-in-out infinite;
+}
