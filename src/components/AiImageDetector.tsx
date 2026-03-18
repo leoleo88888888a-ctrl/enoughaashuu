@@ -304,7 +304,7 @@ export default function AIImageDetector() {
                     resultData.is_ai_generated ? "text-red-300" : "text-green-300"
                   }`}
                 >
-                  {resultData.is_ai_generated ? "AI GENERATED" : "LIKELY AUTHENTIC"}
+                  {resultData.is_ai_generated ? "AI generated image" : "Real image"}
                 </p>
               </div>
 
@@ -335,7 +335,7 @@ export default function AIImageDetector() {
                     />
                   </div>
                   <p className="text-xs text-gray-400 text-right">
-                    {resultData.is_ai_generated ? "Likely AI" : "Likely Authentic"}
+                    {resultData.is_ai_generated ? "AI generated image" : "Real image"}
                   </p>
                 </div>
               </div>
