@@ -66,7 +66,7 @@ async function detectWithSightengine(imageBuffer: Buffer): Promise<{
   }
 }
 
-async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
+async function detectWithHuggingFace(imageBuffer: Buffer, mimeType: string): Promise<{
   confidence: number;
   label: string;
   processing_time: number;
@@ -90,7 +90,10 @@ async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
     const response = await fetch(
       "https://router.huggingface.co/hf-inference/models/Falconsai/nsfw_image_detection",
       {
-        headers: { Authorization: `Bearer ${hfToken}` },
+        headers: {
+          Authorization: `Bearer ${hfToken}`,
+          "Content-Type": mimeType || "application/octet-stream",
+        },
         method: "POST",
           body: new Uint8Array(imageBuffer),
       }
@@ -247,7 +250,7 @@ export async function POST(request: Request) {
     // Run all three detection engines in parallel
     const [sightengineResult, huggingfaceResult, metadataResult] = await Promise.all([
       detectWithSightengine(imageBuffer),
-      detectWithHuggingFace(imageBuffer),
+      detectWithHuggingFace(imageBuffer, imageFile.type),
       analyzeMetadata(imageBuffer, imageFile),
     ]);
 
