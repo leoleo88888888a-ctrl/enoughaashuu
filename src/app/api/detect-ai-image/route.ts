@@ -5,20 +5,8 @@ interface SightengineResponse {
   request: {
     id: string;
   };
-  models: {
-    active: boolean;
-    properties: {
-      ai: {
-        "ateeqqAI-v2.1": {
-          confidence: number;
-          found: boolean;
-        };
-        "ateeqqAI-v3.0": {
-          confidence: number;
-          found: boolean;
-        };
-      };
-    };
+  type?: {
+    ai_generated?: number;
   };
 }
 
@@ -33,6 +21,7 @@ async function detectWithSightengine(imageBuffer: Buffer): Promise<{
   label: string;
   models_used: string[];
   processing_time: number;
+  available: boolean;
 }> {
   const startTime = Date.now();
 
@@ -41,10 +30,10 @@ async function detectWithSightengine(imageBuffer: Buffer): Promise<{
     const secret = process.env.SIGHTENGINE_API_SECRET || "secret_placeholder";
 
     const formData = new FormData();
-    formData.append("userid", user);
     formData.append("api_user", user);
     formData.append("api_secret", secret);
     formData.append("models", "genai");
+    formData.append("media", new Blob([new Uint8Array(imageBuffer)], { type: "image/jpeg" }));
     
     const response = await fetch("https://api.sightengine.com/1.0/check.json", {
       method: "POST",
@@ -56,39 +45,23 @@ async function detectWithSightengine(imageBuffer: Buffer): Promise<{
     }
 
     const data = (await response.json()) as SightengineResponse;
-
-    // Process the response
-    let aiConfidence = 0;
-    let found = false;
-
-    if (data.models?.properties?.ai) {
-      const aiModels = data.models.properties.ai;
-      // Use the best confidence from available models
-      if ("ateeqqAI-v3.0" in aiModels) {
-        const v3 = aiModels["ateeqqAI-v3.0"] as { confidence: number; found: boolean };
-        aiConfidence = v3.confidence;
-        found = v3.found;
-      } else if ("ateeqqAI-v2.1" in aiModels) {
-        const v2 = aiModels["ateeqqAI-v2.1"] as { confidence: number; found: boolean };
-        aiConfidence = v2.confidence;
-        found = v2.found;
-      }
-    }
+    const aiConfidence = Math.min(1, Math.max(0, data.type?.ai_generated ?? 0.5));
 
     return {
-      confidence: found ? aiConfidence : 1 - aiConfidence,
-      label: found ? "AI Generated (GenAI)" : "Likely Authentic",
-      models_used: ["ateeqqAI-v3.0", "ateeqqAI-v2.1"],
+      confidence: aiConfidence,
+      label: aiConfidence >= 0.5 ? "AI Generated (GenAI)" : "Likely Authentic",
+      models_used: ["genai"],
       processing_time: Date.now() - startTime,
+      available: true,
     };
   } catch (error) {
     console.error("Sightengine detection error:", error);
-    // Return fallback response
     return {
-      confidence: 0.5,
+      confidence: 0,
       label: "Unable to analyze (API unavailable)",
-      models_used: ["ateeqqAI"],
+      models_used: ["genai"],
       processing_time: Date.now() - startTime,
+      available: false,
     };
   }
 }
@@ -97,6 +70,7 @@ async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
   confidence: number;
   label: string;
   processing_time: number;
+  available: boolean;
 }> {
   const startTime = Date.now();
 
@@ -104,17 +78,17 @@ async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
     const hfToken = process.env.HF_API_TOKEN || "";
     
     if (!hfToken) {
-      // Return demo response if no token
       return {
-        confidence: 0.45,
-        label: "Likely Authentic",
+        confidence: 0,
+        label: "Unable to analyze (missing token)",
         processing_time: Date.now() - startTime,
+        available: false,
       };
     }
 
     // Using Hugging Face Inference API with a vision model
     const response = await fetch(
-      "https://api-inference.huggingface.co/models/Falconsai/nsfw_image_detection",
+      "https://router.huggingface.co/hf-inference/models/Falconsai/nsfw_image_detection",
       {
         headers: { Authorization: `Bearer ${hfToken}` },
         method: "POST",
@@ -123,7 +97,21 @@ async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
     );
 
     if (!response.ok) {
-      throw new Error(`HF API error: ${response.statusText}`);
+      const reason =
+        response.status === 401
+          ? "Unable to analyze (invalid Hugging Face token or missing permissions)"
+          : response.status === 403
+            ? "Unable to analyze (Hugging Face token access denied)"
+            : response.status === 429
+              ? "Unable to analyze (Hugging Face rate limit reached)"
+              : `Unable to analyze (Hugging Face error ${response.status})`;
+
+      return {
+        confidence: 0,
+        label: reason,
+        processing_time: Date.now() - startTime,
+        available: false,
+      };
     }
 
     const predictions = (await response.json()) as HuggingFaceResponse[];
@@ -142,13 +130,15 @@ async function detectWithHuggingFace(imageBuffer: Buffer): Promise<{
       confidence: aiConfidence,
       label: aiConfidence > 0.6 ? "Likely AI Generated" : "Likely Authentic",
       processing_time: Date.now() - startTime,
+      available: true,
     };
   } catch (error) {
     console.error("HuggingFace detection error:", error);
     return {
-      confidence: 0.5,
+      confidence: 0,
       label: "Unable to analyze (API unavailable)",
       processing_time: Date.now() - startTime,
+      available: false,
     };
   }
 }
@@ -267,10 +257,22 @@ export async function POST(request: Request) {
     const huggingfaceWeight = 0.4;
     const metadataWeight = 0.2;
 
-    const weightedScore =
-      sightengineResult.confidence * sightengineWeight +
-      huggingfaceResult.confidence * huggingfaceWeight +
-      metadataResult.confidence * metadataWeight;
+    let weightedNumerator = metadataResult.confidence * metadataWeight;
+    let weightedDenominator = metadataWeight;
+
+    if (sightengineResult.available) {
+      weightedNumerator += sightengineResult.confidence * sightengineWeight;
+      weightedDenominator += sightengineWeight;
+    }
+
+    if (huggingfaceResult.available) {
+      weightedNumerator += huggingfaceResult.confidence * huggingfaceWeight;
+      weightedDenominator += huggingfaceWeight;
+    }
+
+    const weightedScore = weightedDenominator > 0
+      ? weightedNumerator / weightedDenominator
+      : metadataResult.confidence;
 
     // Get image size
     const fileSizeMB = (imageFile.size / (1024 * 1024)).toFixed(2);
