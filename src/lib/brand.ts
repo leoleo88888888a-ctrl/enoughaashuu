@@ -1,6 +1,6 @@
 export const BRAND_NAME = "RemoveBanana";
 
-export const BRAND_TAGLINE = "A Banana That Removes the Hard Parts.";
+export const BRAND_TAGLINE = "Clean. Detect. Generate. In Seconds.";
 
 export const BRAND_DESCRIPTION =
   "RemoveBanana is an all-in-one toolkit that removes the hard parts, helping you clean, detect, and generate effortlessly.";

@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Food%20and%20Drink/Banana.webp" alt="Banana" width="25" height="25" /> RemoveBanana
 
-**A Banana That Removes the Hard Parts.**
+**Clean. Detect. Generate. In Seconds.**
 
 RemoveBanana is an all-in-one toolkit that removes the hard parts, helping you clean, detect, and generate effortlessly.
 
