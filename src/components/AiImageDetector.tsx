@@ -291,20 +291,21 @@ export default function AIImageDetector() {
                 resultData.overall_confidence
               )}`}
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <h4 className="text-lg font-semibold text-white flex items-center gap-2">
                   <Eye className="w-5 h-5" />
                   Overall Verdict
                 </h4>
-                <span
-                  className={`text-sm font-bold px-4 py-1 rounded-full ${
-                    resultData.is_ai_generated
-                      ? "bg-red-500/20 text-red-300"
-                      : "bg-green-500/20 text-green-300"
+              </div>
+
+              <div className="mb-5 text-center">
+                <p
+                  className={`text-4xl md:text-6xl font-black tracking-tight leading-none ${
+                    resultData.is_ai_generated ? "text-red-300" : "text-green-300"
                   }`}
                 >
-                  {resultData.is_ai_generated ? "AI Generated" : "Likely Authentic"}
-                </span>
+                  {resultData.is_ai_generated ? "AI GENERATED" : "LIKELY AUTHENTIC"}
+                </p>
               </div>
 
               <div className="flex items-center justify-between">
