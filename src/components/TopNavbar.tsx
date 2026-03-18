@@ -37,14 +37,14 @@ export default function TopNavbar() {
             className="h-7 w-7 rounded-md group-hover:scale-105 transition-transform duration-300"
             priority
           />
-          <span
+          {/* <span
             className={isLandingPage
               ? "inline font-bold text-base sm:text-xl tracking-tight whitespace-nowrap bg-gradient-to-r from-amber-200 via-orange-200 to-pink-200 bg-clip-text text-transparent"
               : "inline font-bold text-base sm:text-xl tracking-tight whitespace-nowrap"
             }
           >
             RemoveBanana
-          </span>
+          </span> */}
         </Link>
 
         <div className="flex items-center justify-end gap-2 sm:gap-3 min-w-0 text-sm font-medium text-gray-400">
