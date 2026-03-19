@@ -20,8 +20,6 @@
 - Detect AI-generated images with a hybrid voting pipeline
 - Generate styled QR codes for multiple payload types
 
-Live site: https://removebanana.aashuu.tech
-
 ## Feature Overview
 
 | Tool | Route | What it does | Processing model |
