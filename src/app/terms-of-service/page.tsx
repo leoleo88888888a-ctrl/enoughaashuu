@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer";
 
 export default function TermsOfService() {
   return (
@@ -24,14 +25,14 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
                 <p>
-                  By accessing and using RemoveBanana ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
+                  By accessing and using RemoveBanana (&quot;the Service&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">2. Service Description</h2>
                 <p>
-                  RemoveBanana is a free tool that helps remove watermarks from AI-generated images and videos. The Service is provided "as-is" without warranties of any kind.
+                  RemoveBanana is a toolkit for media cleanup and utility workflows, including image watermark cleanup, Sora video cleanup, background removal, AI image detection, and QR code generation. The Service is provided &quot;as-is&quot; without warranties of any kind.
                 </p>
               </section>
 
@@ -50,12 +51,12 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">4. Permitted Use</h2>
                 <p>
-                  You may use RemoveBanana to remove watermarks from:
+                  You may use RemoveBanana for lawful personal or business workflows, including:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
-                  <li>Content you personally created</li>
-                  <li>Content you have explicit permission to modify</li>
-                  <li>Publicly shared content for personal use</li>
+                  <li>Processing content you personally created</li>
+                  <li>Processing content you have explicit permission to modify</li>
+                  <li>Generating QR codes and utility assets for legitimate use</li>
                 </ul>
               </section>
 
@@ -63,7 +64,7 @@ export default function TermsOfService() {
                 <h2 className="text-2xl font-semibold text-white mb-4">5. Prohibited Uses</h2>
                 <p>You may NOT use RemoveBanana to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
-                  <li>Remove watermarks from copyrighted content you don't own</li>
+                  <li>Process copyrighted content you don&apos;t own without permission</li>
                   <li>Create misleading or fraudulent content</li>
                   <li>Violate third-party rights or platform Terms of Service</li>
                   <li>Engage in harassment, defamation, or illegal activities</li>
@@ -73,7 +74,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">6. Disclaimer of Warranties</h2>
                 <p>
-                  The Service is provided "AS IS" without warranties of any kind, express or implied. We do not guarantee that the Service will be error-free, uninterrupted, or meet your expectations.
+                  The Service is provided &quot;AS IS&quot; without warranties of any kind, express or implied. We do not guarantee that the Service will be error-free, uninterrupted, or meet your expectations.
                 </p>
               </section>
 
@@ -102,9 +103,7 @@ export default function TermsOfService() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2026 RemoveBanana by aashuu ✦</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   return (
@@ -31,14 +32,14 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">2. Data We Do NOT Collect</h2>
                 <ul className="list-disc list-inside space-y-2 ml-2">
-                  <li>Your images or videos</li>
+                  <li>Your uploaded media files and generated outputs</li>
+                  <li>Your prompts, links, or QR payload content</li>
                   <li>Personal information (name, email, location, IP address)</li>
-                  <li>Usage data or analytics</li>
                   <li>Cookies or tracking pixels</li>
                   <li>Any identifying information</li>
                 </ul>
                 <p className="mt-4">
-                  <strong>All processing happens entirely in your browser using client-side JavaScript.</strong> Your data never leaves your device.
+                  <strong>For browser-side tools, processing happens entirely in your browser using client-side JavaScript.</strong> Your private content is not stored by us.
                 </p>
               </section>
 
@@ -77,9 +78,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2026 RemoveBanana by aashuu ✦</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer";
 import { Github, Twitter } from "lucide-react";
 import { BRAND_DESCRIPTION, BRAND_TAGLINE } from "@/lib/brand";
 
@@ -38,27 +39,30 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
               <p className="text-gray-400 leading-relaxed">
-                RemoveBanana exists to give creators full control over AI-generated content. Google embeds invisible watermarks (SynthID) into every Gemini image, and OpenAI adds overlays to Sora videos. These watermarks serve corporate interests, not creators.
+                RemoveBanana exists to give creators full control over modern AI and media workflows. From cleaning Gemini/Imagen images and Sora videos, to removing backgrounds, detecting AI-generated visuals, and generating styled QR codes, we build practical tools that save time.
               </p>
               <p className="text-gray-400 leading-relaxed mt-4">
-                We built RemoveBanana to restore agency — enabling artists, designers, and creators to use AI tools without invisible tracking or restrictions.
+                We built RemoveBanana to restore agency and speed, so artists, marketers, builders, and teams can create faster without unnecessary friction.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">How It Works</h2>
               <p className="text-gray-400 leading-relaxed">
-                <strong>For Images:</strong> RemoveBanana uses reverse alpha blending mathematics to detect and remove SynthID watermarks embedded in pixel data. All processing happens in your browser — your images never leave your device.
+                <strong>For Image Cleanup:</strong> RemoveBanana uses reverse alpha blending mathematics to detect and remove SynthID watermarks embedded in pixel data. All processing happens in your browser for image cleanup flows.
               </p>
               <p className="text-gray-400 leading-relaxed mt-4">
-                <strong>For Videos:</strong> Sora watermarks are frontend overlays, not embedded in the file. We extract the direct URL to the clean MP4 from OpenAI's CDN and serve it to you — no watermark, no re-encoding.
+                <strong>For Video Cleanup:</strong> Sora watermarks are frontend overlays, not embedded in the file. We extract the direct URL to the clean MP4 from OpenAI's CDN and serve it to you with no re-encoding.
+              </p>
+              <p className="text-gray-400 leading-relaxed mt-4">
+                <strong>For Detection & Generation:</strong> We provide an AI image detector to identify generated/manipulated visuals and a flexible QR generator for links, Wi-Fi, vCards, events, SMS, and geo sharing.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Privacy First</h2>
               <p className="text-gray-400 leading-relaxed">
-                100% of your data stays on your device. No uploads, no tracking, no accounts. We don't store images, videos, or usage data. RemoveBanana is the most private AI watermark removal tool available.
+                Privacy is a core default. For browser-side tools, your files and input stay on your device. We do not require accounts, and we do not store personal content from image, video, detector, or QR creation workflows.
               </p>
             </div>
 
@@ -99,9 +103,7 @@ export default function About() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2026 RemoveBanana by aashuu ✦</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

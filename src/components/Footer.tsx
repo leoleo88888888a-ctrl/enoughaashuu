@@ -5,16 +5,18 @@ import { Github, Twitter } from "lucide-react";
 import { BRAND_TAGLINE } from "@/lib/brand";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Product</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Tools</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
-                  Remove Watermark
+                <Link href="/image-remover" className="hover:text-white transition-colors">
+                  Image Remover
                 </Link>
               </li>
               <li>
@@ -28,8 +30,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition-colors">
-                  Blog
+                <Link href="/ai-image-detector" className="hover:text-white transition-colors">
+                  AI Image Detector
+                </Link>
+              </li>
+              <li>
+                <Link href="/qr-code-generator" className="hover:text-white transition-colors">
+                  QR Generator
                 </Link>
               </li>
             </ul>
@@ -46,6 +53,11 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-white transition-colors">
+                  Blog
                 </Link>
               </li>
             </ul>
@@ -92,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 text-center text-sm text-gray-500">
           <p className="mb-2 text-gray-400">{BRAND_TAGLINE}</p>
-          <p>© 2026 RemoveBanana by aashuu ✦</p>
+          <p>© {currentYear} RemoveBanana by aashuu ✦</p>
         </div>
       </div>
     </footer>

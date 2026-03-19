@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -130,9 +131,7 @@ export default function RemoveGeminiWatermarkBlog() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2026 RemoveBanana by aashuu ✦</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

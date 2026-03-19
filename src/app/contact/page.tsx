@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer";
 import { Github, Twitter, Mail } from "lucide-react";
 
 export default function Contact() {
@@ -108,9 +109,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-12 text-center text-sm text-gray-500 px-6">
-        <p>© 2026 RemoveBanana by aashuu ✦</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
