@@ -1,5 +1,4 @@
 <div align="center"> 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Food%20and%20Drink/Banana.webp" alt="Banana" width="25" height="25" /> RemoveBanana
 <a href="https://peerlist.io/aashuu/project/removebanana" target="_blank" rel="noreferrer">
 				<img
 					src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
@@ -9,18 +8,9 @@
 			</a>
 <img width="1777" height="844" alt="Screenshot 2026-03-19 at 12 07 12 PM" src="https://github.com/user-attachments/assets/c2652a28-a17c-46b5-a994-7d4bf46dc07c" />
 
-`Clean. Detect. Generate. In Seconds.`
+<h2 align="center"><a href="https://removebanana.aashuu.tech/"><strong>✦ removebanana.aashuu.tech ✦</strong></a></h2>
 
-<h2 align="center"><a href="https://removebanana.aashuu.tech/"><strong>✦ removebanana.aashuu.tech ✦</strong></a><br><br>RemoveBanana is an all-in-one toolkit that removes the hard parts, so you can clean, detect, and generate in seconds.
-</h2>
-
-<a href="https://peerlist.io/aashuu/project/removebanana" target="_blank" rel="noreferrer">
-				<img
-					src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
-					alt="RemoveBanana"
-					style="width: auto; height: 72px;"
-				/>
-			</a>
+`RemoveBanana is an all-in-one toolkit that removes the hard parts, so you can clean, detect, and generate in seconds.`
 <hr>
 </div>
 
