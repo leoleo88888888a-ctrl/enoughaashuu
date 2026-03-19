@@ -158,13 +158,22 @@ export default function TopNavbar() {
                 <Github className="w-4 h-4" />
                 <span className="hidden sm:inline">GitHub</span>
               </a>
-              {/* <Link
-                href="/image-remover"
-                className="inline-flex items-center gap-2 rounded-full border border-orange-300/35 bg-gradient-to-r from-orange-500/90 via-pink-500/90 to-violet-500/90 px-4 py-2.5 text-white shadow-[0_8px_24px_rgba(236,72,153,0.35)] hover:brightness-110 transition-all duration-300"
+              <a
+                href="https://buymeacoffee.com/aashuu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sponsor RemoveBanana"
+                className="inline-flex items-center gap-2 rounded-full border border-orange-300/35 bg-gradient-to-r from-orange-500/60 via-pink-500/60 to-violet-500/60 px-4 py-2.5 text-white shadow-[0_8px_24px_rgba(236,72,153,0.35)] hover:brightness-110 transition-all duration-300"
               >
-                <ImageIcon className="w-4 h-4" />
-                <span className="hidden sm:inline">Start Free</span>
-              </Link> */}
+                <Image
+                  src="/Soft Ice Cream.webp"
+                  alt="Sponsor"
+                  width={16}
+                  height={16}
+                  className="h-4 w-4"
+                />
+                <span className="hidden sm:inline">icecream</span>
+              </a>
             </>
           )}
         </div>
