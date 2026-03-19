@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "QR Code Generator | RemoveBanana",
   description:
-    "Generate custom QR codes for text, URL, Wi-Fi, vCard, event, phone, SMS, and geo with full style and export controls.",
+    "Generate custom QR codes for text, URL, Wi-Fi, vCard, event, phone, SMS, geo, and train ticket data with full style and export controls.",
 };
 
 export default function QrCodeGeneratorPage() {
@@ -33,7 +33,7 @@ export default function QrCodeGeneratorPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Create beautiful QR codes for text, URLs, Wi-Fi access, contacts, events, SMS, and geo pins.
+            Create beautiful QR codes for text, URLs, Wi-Fi access, contacts, events, SMS, geo pins, and train ticket data.
             Customize styles, add logos, then export as PNG, JPEG, or SVG.
           </p>
 
@@ -57,7 +57,7 @@ export default function QrCodeGeneratorPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
               </span>
-              Supports: Text • URL • Wi-Fi • vCard • Event • Phone • SMS • Geo
+              Supports: Text • URL • Wi-Fi • vCard • Event • Phone • SMS • Geo • Train Ticket
             </div>
           </div>
         </div>

@@ -13,11 +13,12 @@ import {
   RefreshCcw,
   Smartphone,
   Text,
+  Ticket,
   UserRound,
   Wifi,
 } from "lucide-react";
 
-type TabKey = "text" | "wifi" | "vcard" | "event" | "phone" | "sms" | "geo";
+type TabKey = "text" | "wifi" | "vcard" | "event" | "phone" | "sms" | "geo" | "train";
 type GradientType = "linear" | "radial" | "single";
 type DotStyle = "dots" | "rounded" | "classy" | "classy-rounded" | "square" | "extra-rounded";
 type CornerSquareStyle = "" | "dot" | "square" | "extra-rounded";
@@ -39,6 +40,7 @@ const TAB_LABELS: Array<{ key: TabKey; label: string; icon: React.ComponentType<
   { key: "phone", label: "Phone", icon: Phone },
   { key: "sms", label: "SMS", icon: Smartphone },
   { key: "geo", label: "Geo", icon: LocateFixed },
+  { key: "train", label: "Train Ticket", icon: Ticket },
 ];
 
 const DOT_STYLES: DotStyle[] = ["dots", "rounded", "classy", "classy-rounded", "square", "extra-rounded"];
@@ -121,6 +123,17 @@ export default function QrCodeGenerator() {
   const [smsMessage, setSmsMessage] = useState("");
   const [geoLat, setGeoLat] = useState("");
   const [geoLon, setGeoLon] = useState("");
+  const [trainPnr, setTrainPnr] = useState("");
+  const [trainNumber, setTrainNumber] = useState("");
+  const [trainName, setTrainName] = useState("");
+  const [trainDate, setTrainDate] = useState("");
+  const [trainFrom, setTrainFrom] = useState("");
+  const [trainTo, setTrainTo] = useState("");
+  const [trainCoach, setTrainCoach] = useState("");
+  const [trainSeat, setTrainSeat] = useState("");
+  const [trainClassCode, setTrainClassCode] = useState("");
+  const [trainQuota, setTrainQuota] = useState("");
+  const [trainPassengerName, setTrainPassengerName] = useState("");
 
   const [color1, setColor1] = useState("#818cf8");
   const [color2, setColor2] = useState("#c084fc");
@@ -166,14 +179,41 @@ export default function QrCodeGenerator() {
         filenameText = phoneNumber;
         data = `tel:${filenameText}`;
         break;
+      case "train": {
+        filenameText = `${trainPnr || trainNumber || "train_ticket"}`;
+        const payload = {
+          kind: "train-ticket",
+          source: "custom",
+          pnr: trainPnr.trim(),
+          trainNo: trainNumber.trim(),
+          trainName: trainName.trim(),
+          journeyDate: trainDate,
+          from: trainFrom.trim(),
+          to: trainTo.trim(),
+          coach: trainCoach.trim(),
+          seat: trainSeat.trim(),
+          classCode: trainClassCode.trim(),
+          quota: trainQuota.trim(),
+          passengerName: trainPassengerName.trim(),
+        };
+        data = JSON.stringify(payload);
+        break;
+      }
       default:
         filenameText = textValue;
         data = filenameText || "https://removebanana.aashuu.tech/";
         break;
     }
 
+    const missingTrainFields =
+      activeTab === "train" &&
+      (!trainPnr.trim() || !trainNumber.trim() || !trainDate || !trainFrom.trim() || !trainTo.trim());
+
     const isDataEmpty =
-      !data.trim() || data.includes("::") || (data.length < 25 && (activeTab === "vcard" || activeTab === "event"));
+      !data.trim() ||
+      data.includes("::") ||
+      missingTrainFields ||
+      (data.length < 25 && (activeTab === "vcard" || activeTab === "event"));
 
     return {
       data,
@@ -199,6 +239,17 @@ export default function QrCodeGenerator() {
     geoLon,
     phoneNumber,
     textValue,
+    trainPnr,
+    trainNumber,
+    trainName,
+    trainDate,
+    trainFrom,
+    trainTo,
+    trainCoach,
+    trainSeat,
+    trainClassCode,
+    trainQuota,
+    trainPassengerName,
   ]);
 
   useEffect(() => {
@@ -624,6 +675,94 @@ export default function QrCodeGenerator() {
                     placeholder="Longitude"
                     value={geoLon}
                     onChange={(e) => setGeoLon(e.target.value)}
+                  />
+                </div>
+              )}
+
+              {activeTab === "train" && (
+                <div className="space-y-3">
+                  <div className="rounded-xl border border-amber-300/25 bg-amber-500/10 p-3 text-xs text-amber-100">
+                    Custom train ticket QR format for your own system. It is not an official IRCTC-authenticated ticket QR.
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="PNR (required)"
+                      value={trainPnr}
+                      onChange={(e) => setTrainPnr(e.target.value)}
+                    />
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="Train Number (required)"
+                      value={trainNumber}
+                      onChange={(e) => setTrainNumber(e.target.value)}
+                    />
+                  </div>
+
+                  <input
+                    className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                    placeholder="Train Name"
+                    value={trainName}
+                    onChange={(e) => setTrainName(e.target.value)}
+                  />
+
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <input
+                      type="date"
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none focus:ring focus:ring-indigo-400/30"
+                      value={trainDate}
+                      onChange={(e) => setTrainDate(e.target.value)}
+                    />
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="Passenger Name"
+                      value={trainPassengerName}
+                      onChange={(e) => setTrainPassengerName(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="From Station (required)"
+                      value={trainFrom}
+                      onChange={(e) => setTrainFrom(e.target.value)}
+                    />
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="To Station (required)"
+                      value={trainTo}
+                      onChange={(e) => setTrainTo(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="Coach"
+                      value={trainCoach}
+                      onChange={(e) => setTrainCoach(e.target.value)}
+                    />
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="Seat"
+                      value={trainSeat}
+                      onChange={(e) => setTrainSeat(e.target.value)}
+                    />
+                    <input
+                      className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                      placeholder="Class (e.g. 3A)"
+                      value={trainClassCode}
+                      onChange={(e) => setTrainClassCode(e.target.value)}
+                    />
+                  </div>
+
+                  <input
+                    className="w-full rounded-xl border border-white/15 bg-slate-900/70 p-3 text-slate-100 outline-none placeholder:text-slate-500 focus:ring focus:ring-indigo-400/30"
+                    placeholder="Quota (e.g. GN, TQ)"
+                    value={trainQuota}
+                    onChange={(e) => setTrainQuota(e.target.value)}
                   />
                 </div>
               )}
