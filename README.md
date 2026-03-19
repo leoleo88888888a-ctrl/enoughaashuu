@@ -1,6 +1,25 @@
+<div align="center"> 
+<a href="https://removebanana.aashuu.tech/"><img src="./public/Banana.webp" width="500px" /></a><br>
+
+
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Food%20and%20Drink/Banana.webp" alt="Banana" width="25" height="25" /> RemoveBanana
 
 <img width="1777" height="844" alt="Screenshot 2026-03-19 at 12 07 12 PM" src="https://github.com/user-attachments/assets/c2652a28-a17c-46b5-a994-7d4bf46dc07c" />
+
+`The safest workspace to store and share your private notes & messages!`
+
+<h2 align="center"><a href="https://www.safenote.me/"><strong>✦ www.safenote.me ✦</strong></a><br><br>F*ck Authentication! No Logins. No Signups. <br>Your data is fully encrypted and only accessible by you.</h2>
+
+<a href="https://peerlist.io/aashuu/project/removebanana" target="_blank" rel="noreferrer">
+				<img
+					src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
+					alt="RemoveBanana"
+					style="width: auto; height: 72px;"
+				/>
+			</a>
+<hr>
+</div>
+
 
 **Clean. Detect. Generate. In Seconds.**
 
