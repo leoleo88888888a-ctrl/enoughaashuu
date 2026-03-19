@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/Preview.png",
+        url: "/preview.png?v=20260319-1",
         width: 1200,
         height: 630,
         alt: `${BRAND_NAME} - ${BRAND_TAGLINE}`,
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     site: "@warrioraashuu",
     title: `${BRAND_NAME} | ${BRAND_TAGLINE}`,
     description: BRAND_DESCRIPTION,
-    images: ["/Preview.png"],
+    images: ["/preview.png?v=20260319-1"],
   },
 };
 
