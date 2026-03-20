@@ -68,18 +68,18 @@ export function AppShell({
           animate="visible"
           className="absolute bottom-4 right-4 z-50 flex flex-col gap-2 items-end"
         >
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <Tooltip delay={300}>
               <Tooltip.Trigger>
                 <a
-                  href="https://peerlist.io/aashuu/project/enough-aashuu"
+                  href="https://enough.aashuu.tech/"
                   target="_blank"
                   rel="noreferrer"
-                  data-umami-event="click enough-aashuu"
+                  data-umami-event="click enoughaashuu"
                 >
                   <img
                     src="/enough.webp"
-                    alt="enough aashuu"
+                    alt="Enough Aashuu"
                     width={40}
                     height={40}
                     className="rounded-xl border-2 dark:border"
@@ -90,7 +90,7 @@ export function AppShell({
                 <p>Discover the other tools.</p>
               </Tooltip.Content>
             </Tooltip>
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={itemVariants}>
             <ShareButton />
           </motion.div>

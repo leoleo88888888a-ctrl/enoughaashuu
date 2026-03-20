@@ -4,12 +4,10 @@ import { Icon } from "@iconify/react";
 import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { trackEvent } from "#/lib/analytics";
-import { useChangelogStatus } from "#/queries/changelog/use-changelog-status";
-import { InfoModal } from "./InfoModal";
 
 const FEEDBACK_URL = "https://x.com/enoughaashuu";
 const ICECREAM_URL = "https://buymeacoffee.com/aashuu";
+const WEBSITE_URL = "https://enough.aashuu.tech/";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -29,22 +27,7 @@ const itemVariants: Variants = {
 };
 
 export function FABs() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [defaultTab, setDefaultTab] = useState<string | undefined>();
-  const [highlightLatest, setHighlightLatest] = useState(false);
-  const { hasNew, markSeen } = useChangelogStatus();
-
-  function openInfo() {
-    const wasNew = hasNew;
-    setDefaultTab(wasNew ? "changelog" : undefined);
-    setHighlightLatest(wasNew);
-    if (wasNew) markSeen();
-    setIsOpen(true);
-    trackEvent("open info", {
-      tab: wasNew ? "changelog" : "about",
-      has_new: wasNew,
-    });
-  }
+  const [websiteHovered, setWebsiteHovered] = useState(false);
 
   return (
     <motion.div
@@ -121,21 +104,27 @@ export function FABs() {
       <motion.div variants={itemVariants}>
         <Tooltip delay={0}>
           <Tooltip.Trigger>
-            <Button
-              aria-label="Show info"
-              onPress={openInfo}
-              isIconOnly
-              variant="ghost"
-              className="relative"
+            <a
+              href={WEBSITE_URL}
+              target="_blank"
+              rel="noreferrer"
+              data-umami-event="click enough website"
+              onMouseEnter={() => setWebsiteHovered(true)}
+              onMouseLeave={() => setWebsiteHovered(false)}
             >
-              <Icon icon="lucide:info" width={28} height={28} />
-              {hasNew && (
-                <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500" />
-              )}
-            </Button>
+              <Button isIconOnly variant="ghost" aria-label="Open Enough Aashuu website">
+                <Image
+                  src="/enough.webp"
+                  alt="enough aashuu"
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 rounded-full"
+                />
+              </Button>
+            </a>
           </Tooltip.Trigger>
           <Tooltip.Content placement="left">
-            <p>About</p>
+            <p>{websiteHovered ? "Visit enough.aashuu.tech" : "Open website"}</p>
           </Tooltip.Content>
         </Tooltip>
       </motion.div>
@@ -162,12 +151,6 @@ export function FABs() {
         </Tooltip>
       </motion.div>
 
-      <InfoModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        defaultTab={defaultTab}
-        highlightLatest={highlightLatest}
-      />
     </motion.div>
   );
 }
