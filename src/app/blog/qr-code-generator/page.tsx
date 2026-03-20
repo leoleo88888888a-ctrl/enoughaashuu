@@ -33,7 +33,7 @@ export default function QrCodeGeneratorBlogPage() {
 
             <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
               <p className="text-lg">
-                RemoveBanana now includes a complete QR code generator with support for links, Wi-Fi sharing,
+                Enough Aashuu now includes a complete QR code generator with support for links, Wi-Fi sharing,
                 contact cards, event check-ins, SMS shortcuts, and geo pins. It is built for creators,
                 businesses, and developers who need clean QR workflows without extra tools.
               </p>

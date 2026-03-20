@@ -64,9 +64,9 @@ export default function ImagenWatermarkBlog() {
               <h2 className="text-3xl font-bold text-white mt-12">Step-by-Step: Remove Imagen Watermark</h2>
 
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 mt-6">
-                <h3 className="text-2xl font-semibold text-white mb-3">Step 1: Open RemoveBanana</h3>
+                <h3 className="text-2xl font-semibold text-white mb-3">Step 1: Open Enough Aashuu</h3>
                 <p>
-                  Navigate to <strong>removebanana.aashuu.tech</strong> in your browser. No account or sign-up is required — the tool works instantly.
+                  Navigate to <strong>enough.aashuu.tech</strong> in your browser. No account or sign-up is required — the tool works instantly.
                 </p>
               </div>
 
@@ -97,7 +97,7 @@ export default function ImagenWatermarkBlog() {
 
               <h2 className="text-3xl font-bold text-white mt-12">Supported Imagen Models</h2>
               <p>
-                RemoveBanana works with images generated from:
+                Enough Aashuu works with images generated from:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-2">
                 <li>Google Imagen 2</li>
@@ -136,14 +136,14 @@ export default function ImagenWatermarkBlog() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Does it work on edited Imagen images?</h3>
                 <p>
-                  Yes! SynthID is designed to survive basic edits like cropping, resizing, compression, and brightness adjustments. RemoveBanana detects and removes the watermark even from edited versions.
+                  Yes! SynthID is designed to survive basic edits like cropping, resizing, compression, and brightness adjustments. Enough Aashuu detects and removes the watermark even from edited versions.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Can I remove watermarks from other AI models?</h3>
                 <p>
-                  RemoveBanana specializes in SynthID watermarks used by Google's Gemini, Imagen, and NanoBanana models. We also support Sora video watermark extraction. Support for other models is coming soon.
+                  Enough Aashuu specializes in SynthID watermarks used by Google's Gemini, Imagen, and NanoBanana models. We also support Sora video watermark extraction. Support for other models is coming soon.
                 </p>
               </div>
 

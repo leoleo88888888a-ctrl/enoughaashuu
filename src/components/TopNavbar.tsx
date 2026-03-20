@@ -32,8 +32,8 @@ export default function TopNavbar() {
         {isLandingPage && (
           <Link href="/" className="flex items-center gap-2 min-w-0 shrink-0 group" aria-label="Go to home">
             <Image
-              src="/Banana.webp"
-              alt="RemoveBanana logo"
+              src="/enough.webp"
+              alt="Enough Aashuu logo"
               width={28}
               height={28}
               className="h-7 w-7 rounded-md group-hover:scale-105 transition-transform duration-300"
@@ -45,7 +45,7 @@ export default function TopNavbar() {
                 : "inline font-bold text-base sm:text-xl tracking-tight whitespace-nowrap"
               }
             >
-              RemoveBanana
+              Enough Aashuu
             </span>
           </Link>
         )}
@@ -163,7 +163,7 @@ export default function TopNavbar() {
                 <span className="hidden sm:inline">X</span>
               </a>
               <a
-                href="https://github.com/codeaashu/RemoveBanana"
+                href="https://github.com/codeaashu/enoughaashuu"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -176,7 +176,7 @@ export default function TopNavbar() {
                 href="https://buymeacoffee.com/aashuu"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Sponsor RemoveBanana"
+                aria-label="Sponsor Enough Aashuu"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-orange-500/5 via-pink-500/5 to-violet-500/5 px-4 py-2.5 text-white  hover:brightness-110 transition-all duration-300"
               >
                 <Image

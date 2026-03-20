@@ -102,7 +102,7 @@ export function FABs() {
         <Tooltip delay={0}>
           <Tooltip.Trigger>
             <a
-              href="https://github.com/codeaashu/RemoveBanana"
+              href="https://github.com/codeaashu/enoughaashuu"
               target="_blank"
               rel="noreferrer"
               data-umami-event="click github link"

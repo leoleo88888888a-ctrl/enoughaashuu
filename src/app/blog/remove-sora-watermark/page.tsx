@@ -33,7 +33,7 @@ export default function RemoveSoraWatermarkBlog() {
 
             <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
               <p className="text-lg">
-                OpenAI Sora adds a visible watermark overlay to every AI-generated video when shared publicly. This guide shows you how to download the original clean MP4 file — without the watermark — using RemoveBanana's free tool.
+                OpenAI Sora adds a visible watermark overlay to every AI-generated video when shared publicly. This guide shows you how to download the original clean MP4 file — without the watermark — using Enough Aashuu's free tool.
               </p>
 
               <h2 className="text-3xl font-bold text-white mt-12">What is the Sora Video Watermark?</h2>
@@ -60,7 +60,7 @@ export default function RemoveSoraWatermarkBlog() {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-12">How Does RemoveBanana Remove the Sora Watermark?</h2>
+              <h2 className="text-3xl font-bold text-white mt-12">How Does Enough Aashuu Remove the Sora Watermark?</h2>
               <p>
                 Since the Sora watermark is a frontend overlay and NOT baked into the video file, our tool works by extracting the direct URL of the raw MP4 file from the Sora share page. Here's what happens under the hood:
               </p>
@@ -89,9 +89,9 @@ export default function RemoveSoraWatermarkBlog() {
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold text-white mb-3">Step 2: Paste into RemoveBanana</h3>
+                <h3 className="text-2xl font-semibold text-white mb-3">Step 2: Paste into Enough Aashuu</h3>
                 <p>
-                  Go to RemoveBanana's Sora Watermark Remover page. Paste the share link into the input field and click "Remove Watermark & Download". Our tool will analyze the link within 1-3 seconds.
+                  Go to Enough Aashuu's Sora Watermark Remover page. Paste the share link into the input field and click "Remove Watermark & Download". Our tool will analyze the link within 1-3 seconds.
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ export default function RemoveSoraWatermarkBlog() {
 
               <h2 className="text-3xl font-bold text-white mt-12">Free & No Data Collection</h2>
               <p>
-                RemoveBanana's Sora watermark remover is 100% free with no download limits. We don't require accounts, we don't store your videos, and all processing happens server-side through a simple proxy. Your data is safe.
+                Enough Aashuu's Sora watermark remover is 100% free with no download limits. We don't require accounts, we don't store your videos, and all processing happens server-side through a simple proxy. Your data is safe.
               </p>
 
               <div className="bg-gradient-to-r from-blue-500/10 to-fuchsia-500/10 border border-blue-400/20 rounded-xl p-6 mt-12">

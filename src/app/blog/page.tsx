@@ -58,7 +58,7 @@ export default function Blog() {
               Blog
             </h1>
             <p className="text-xl text-gray-400">
-              Learn how to remove AI watermarks and get the most out of RemoveBanana.
+              Learn how to remove AI watermarks and get the most out of Enough Aashuu.
             </p>
           </motion.div>
 

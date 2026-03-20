@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Download, X } from "lucide-react";
 
-const INSTALL_PROMPT_DISMISS_KEY = "removebanana-install-dismissed-until";
+const INSTALL_PROMPT_DISMISS_KEY = "enough-aashuu-install-dismissed-until";
 const DISMISS_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
 
 interface BeforeInstallPromptEvent extends Event {

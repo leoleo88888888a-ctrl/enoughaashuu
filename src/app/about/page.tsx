@@ -20,7 +20,7 @@ export default function About() {
             className="mb-12"
           >
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
-              About RemoveBanana
+              About Enough Aashuu
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed">
               {BRAND_TAGLINE}
@@ -39,17 +39,17 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
               <p className="text-gray-400 leading-relaxed">
-                RemoveBanana exists to give creators full control over modern AI and media workflows. From cleaning Gemini/Imagen images and Sora videos, to removing backgrounds, detecting AI-generated visuals, and generating styled QR codes, we build practical tools that save time.
+                Enough Aashuu exists to give creators full control over modern AI and media workflows. From cleaning Gemini/Imagen images and Sora videos, to removing backgrounds, detecting AI-generated visuals, and generating styled QR codes, we build practical tools that save time.
               </p>
               <p className="text-gray-400 leading-relaxed mt-4">
-                We built RemoveBanana to restore agency and speed, so artists, marketers, builders, and teams can create faster without unnecessary friction.
+                We built Enough Aashuu to restore agency and speed, so artists, marketers, builders, and teams can create faster without unnecessary friction.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">How It Works</h2>
               <p className="text-gray-400 leading-relaxed">
-                <strong>For Image Cleanup:</strong> RemoveBanana uses reverse alpha blending mathematics to detect and remove SynthID watermarks embedded in pixel data. All processing happens in your browser for image cleanup flows.
+                <strong>For Image Cleanup:</strong> Enough Aashuu uses reverse alpha blending mathematics to detect and remove SynthID watermarks embedded in pixel data. All processing happens in your browser for image cleanup flows.
               </p>
               <p className="text-gray-400 leading-relaxed mt-4">
                 <strong>For Video Cleanup:</strong> Sora watermarks are frontend overlays, not embedded in the file. We extract the direct URL to the clean MP4 from OpenAI's CDN and serve it to you with no re-encoding.
@@ -69,7 +69,7 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Built by aashuu</h2>
               <p className="text-gray-400 leading-relaxed">
-                RemoveBanana is developed and maintained by aashuu, a builder focused on open-source tools that respect user privacy and autonomy. The full source code is available on GitHub.
+                Enough Aashuu is developed and maintained by aashuu, a builder focused on open-source tools that respect user privacy and autonomy. The full source code is available on GitHub.
               </p>
               <div className="flex gap-4 mt-4">
                 <a
@@ -82,7 +82,7 @@ export default function About() {
                   Follow on X
                 </a>
                 <a
-                  href="https://github.com/codeaashu/RemoveBanana"
+                  href="https://github.com/codeaashu/enoughaashuu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
@@ -96,7 +96,7 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">License</h2>
               <p className="text-gray-400 leading-relaxed">
-                RemoveBanana is released under the MIT License. You're free to use, modify, and distribute it for any purpose.
+                Enough Aashuu is released under the MIT License. You're free to use, modify, and distribute it for any purpose.
               </p>
             </div>
           </motion.div>

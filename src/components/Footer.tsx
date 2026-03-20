@@ -96,7 +96,7 @@ export default function Footer() {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/codeaashu/RemoveBanana"
+                href="https://github.com/codeaashu/enoughaashuu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 text-center text-sm text-gray-500">
           <p className="mb-2 text-gray-400">{BRAND_TAGLINE}</p>
-          <p>© {currentYear} RemoveBanana by aashuu ✦</p>
+          <p>© {currentYear} Enough Aashuu by aashuu ✦</p>
         </div>
       </div>
     </footer>

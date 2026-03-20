@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://removebanana.aashuu.tech";
+  const baseUrl = "https://enough.aashuu.tech";
   const lastModified = new Date();
 
   return [

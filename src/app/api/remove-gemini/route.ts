@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
     const buffer = Buffer.from(await image.arrayBuffer());
 
-    console.log("RemoveBanana: processing Gemini image...");
+    console.log("Enough Aashuu: processing Gemini image...");
 
     // Remove the watermark using the canvas library under the hood
     const result = await removeWatermarkFromBuffer(buffer, {
@@ -31,15 +31,15 @@ export async function POST(request: Request) {
     return new NextResponse(new Uint8Array(result.buffer), {
       headers: {
         "Content-Type": "image/png",
-        "Content-Disposition": "attachment; filename=\"removebanana-clean-image.png\"",
+        "Content-Disposition": "attachment; filename=\"enough-aashuu-clean-image.png\"",
       },
     });
 
   } catch (error: unknown) {
-    console.error("RemoveBanana Gemini processing error:", error);
+    console.error("Enough Aashuu Gemini processing error:", error);
     const message = error instanceof Error
       ? error.message
-      : "RemoveBanana could not process the image. Make sure it is a valid Gemini, Imagen, or Nano Banana image.";
+      : "Enough Aashuu could not process the image. Make sure it is a valid Gemini, Imagen, or Nano Banana image.";
 
     return NextResponse.json(
       { error: message },

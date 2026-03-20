@@ -1,6 +1,6 @@
 /**
- * RemoveBanana browser-side watermark processing logic.
- * Repository: https://github.com/codeaashu/RemoveBanana
+ * Enough Aashuu browser-side watermark processing logic.
+ * Repository: https://github.com/codeaashu/enoughaashuu
  */
 
 // Constants from blendModes.js

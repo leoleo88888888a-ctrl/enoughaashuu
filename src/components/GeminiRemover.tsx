@@ -31,7 +31,7 @@ export default function GeminiRemover() {
             const resultDataUrl = await processGeminiImage(selectedFile);
             setResultUrl(resultDataUrl);
         } catch (err: unknown) {
-            console.error("RemoveBanana image processing error:", err);
+            console.error("Enough Aashuu image processing error:", err);
             const message = err instanceof Error ? err.message : "An unexpected error occurred while processing the image.";
             setError(message);
         } finally {
@@ -151,7 +151,7 @@ export default function GeminiRemover() {
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={resultUrl}
-                                            alt="RemoveBanana cleaned image"
+                                            alt="Enough Aashuu cleaned image"
                                             className="object-contain w-full h-full group-hover:scale-[1.02] transition-transform duration-700"
                                         />
                                         <div className="absolute inset-0 ring-4 ring-inset ring-green-500/20 pointer-events-none rounded-2xl" />
@@ -175,7 +175,7 @@ export default function GeminiRemover() {
                             {resultUrl && (
                                 <a
                                     href={resultUrl}
-                                    download="removebanana.png"
+                                    download="enough-aashuu.png"
                                     className="flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-2xl text-black bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-black transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] min-w-[200px] gap-2"
                                 >
                                     <Download className="w-5 h-5" /> Download Clean Image

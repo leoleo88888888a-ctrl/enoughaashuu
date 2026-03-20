@@ -3,9 +3,9 @@ import IconLogoLandingClient from "./IconLogoLandingClient";
 import "@/iconlogo/styles.css";
 
 export const metadata: Metadata = {
-  title: "IconLogo Studio | RemoveBanana",
+  title: "IconLogo Studio | Enough Aashuu",
   description:
-    "Create icon-based logos with the integrated IconLogo studio inside RemoveBanana.",
+    "Create icon-based logos with the integrated IconLogo studio inside Enough Aashuu.",
 };
 
 export default function IconLogoPage() {

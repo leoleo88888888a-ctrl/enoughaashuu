@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://removebanana.aashuu.tech/sitemap.xml",
-    host: "https://removebanana.aashuu.tech",
+    sitemap: "https://enough.aashuu.tech/sitemap.xml",
+    host: "https://enough.aashuu.tech",
   };
 }

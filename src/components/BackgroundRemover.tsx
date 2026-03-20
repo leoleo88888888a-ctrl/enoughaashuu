@@ -400,7 +400,7 @@ export default function BackgroundRemover() {
 
     try {
       const zip = new JSZip();
-      const folder = zip.folder("removebanana-background-remover");
+      const folder = zip.folder("enough-aashuu-background-remover");
       if (!folder) {
         throw new Error("Failed to initialize ZIP folder.");
       }
@@ -415,7 +415,7 @@ export default function BackgroundRemover() {
       const url = URL.createObjectURL(content);
       const anchor = document.createElement("a");
       anchor.href = url;
-      anchor.download = "removebanana_background_export.zip";
+      anchor.download = "enough-aashuu-background-export.zip";
       anchor.click();
       setTimeout(() => URL.revokeObjectURL(url), 1200);
     } catch (error) {

@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
         if (!url.startsWith("https://sora.chatgpt.com/")) {
             return NextResponse.json(
-                { error: "RemoveBanana requires a Sora URL starting with https://sora.chatgpt.com/." },
+                { error: "Enough Aashuu requires a Sora URL starting with https://sora.chatgpt.com/." },
                 { status: 400 }
             );
         }
@@ -148,7 +148,7 @@ export async function POST(request: Request) {
             mp4Url,
         });
     } catch (error) {
-        console.error("RemoveBanana Sora extraction error:", error);
+        console.error("Enough Aashuu Sora extraction error:", error);
         return NextResponse.json(
             { error: "An unexpected error occurred. Please try again with a valid public Sora link." },
             { status: 500 }

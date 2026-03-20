@@ -72,14 +72,14 @@ export function AppShell({
             <Tooltip delay={300}>
               <Tooltip.Trigger>
                 <a
-                  href="https://removebanana.aashuu.tech/"
+                  href="https://peerlist.io/aashuu/project/enough-aashuu"
                   target="_blank"
                   rel="noreferrer"
-                  data-umami-event="click removebanana"
+                  data-umami-event="click enough-aashuu"
                 >
                   <img
-                    src="/Banana.webp"
-                    alt="RemoveBanana"
+                    src="/enough.webp"
+                    alt="enough aashuu"
                     width={40}
                     height={40}
                     className="rounded-xl border-2 dark:border"

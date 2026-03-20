@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   description: BRAND_DESCRIPTION,
   keywords: [
-    "remove banana",
-    "removebanana",
-    "a banana that removes the hard parts",
+    "enough aashuu",
+    "enough.aashuu.tech",
+    "all-in-one ai toolkit",
     "ai toolkit",
     "clean detect generate",
     "aashuu",
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/Banana.webp",
-    shortcut: "/Banana.webp",
-    apple: "/Banana.webp",
+    icon: "/enough.webp",
+    shortcut: "/enough.webp",
+    apple: "/enough.webp",
   },
   openGraph: {
     title: `${BRAND_NAME} | ${BRAND_TAGLINE}`,

@@ -4,7 +4,7 @@ import TopNavbar from "@/components/TopNavbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "QR Code Generator | RemoveBanana",
+  title: "QR Code Generator | Enough Aashuu",
   description:
     "Generate custom QR codes for text, URL, Wi-Fi, vCard, event, phone, SMS, geo, and train ticket data with full style and export controls.",
 };
@@ -39,15 +39,15 @@ export default function QrCodeGeneratorPage() {
 
           <div className="flex flex-col items-center">
             <a
-              href="https://peerlist.io/aashuu/project/removebanana"
+              href="https://peerlist.io/aashuu/project/enough-aashuu"
               target="_blank"
               rel="noreferrer"
               className="mb-4"
-              aria-label="RemoveBanana on Peerlist"
+              aria-label="Enough Aashuu on Peerlist"
             >
               <img
                 src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
-                alt="RemoveBanana"
+                alt="enough aashuu"
                 style={{ width: "auto", height: "72px" }}
               />
             </a>

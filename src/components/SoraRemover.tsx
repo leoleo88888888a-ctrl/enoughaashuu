@@ -76,7 +76,7 @@ export default function SoraRemover() {
                                 Extracting...
                             </>
                         ) : (
-                            "Process with RemoveBanana"
+                            "Process with Enough Aashuu"
                         )}
                     </button>
                 </form>
@@ -120,7 +120,7 @@ export default function SoraRemover() {
 
                                     <a
                                         href={result.mp4Url}
-                                        download="removebanana-sora-video.mp4"
+                                        download="enough-aashuu-sora-video.mp4"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex flex-shrink-0 items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-black transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
@@ -147,7 +147,7 @@ export default function SoraRemover() {
                 </div>
                 <div>
                     <p className="font-semibold text-gray-300">3. Paste Here</p>
-                    <p className="text-sm text-gray-500 mt-1">Download with RemoveBanana</p>
+                    <p className="text-sm text-gray-500 mt-1">Download with Enough Aashuu</p>
                 </div>
             </div> */}
         </div>

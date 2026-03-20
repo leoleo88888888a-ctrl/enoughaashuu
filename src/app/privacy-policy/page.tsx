@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">1. Overview</h2>
                 <p>
-                  RemoveBanana ("we", "us", or "our") operates the removebanana.aashuu.tech website and service. We are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our service.
+                  Enough Aashuu ("we", "us", or "our") operates the enough.aashuu.tech website and service. We are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our service.
                 </p>
               </section>
 

@@ -25,14 +25,14 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
                 <p>
-                  By accessing and using RemoveBanana (&quot;the Service&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
+                  By accessing and using Enough Aashuu (&quot;the Service&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">2. Service Description</h2>
                 <p>
-                  RemoveBanana is a toolkit for media cleanup and utility workflows, including image watermark cleanup, Sora video cleanup, background removal, AI image detection, and QR code generation. The Service is provided &quot;as-is&quot; without warranties of any kind.
+                  Enough Aashuu is a toolkit for media cleanup and utility workflows, including image watermark cleanup, Sora video cleanup, background removal, AI image detection, and QR code generation. The Service is provided &quot;as-is&quot; without warranties of any kind.
                 </p>
               </section>
 
@@ -51,7 +51,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">4. Permitted Use</h2>
                 <p>
-                  You may use RemoveBanana for lawful personal or business workflows, including:
+                  You may use Enough Aashuu for lawful personal or business workflows, including:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
                   <li>Processing content you personally created</li>
@@ -62,7 +62,7 @@ export default function TermsOfService() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">5. Prohibited Uses</h2>
-                <p>You may NOT use RemoveBanana to:</p>
+                <p>You may NOT use Enough Aashuu to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
                   <li>Process copyrighted content you don&apos;t own without permission</li>
                   <li>Create misleading or fraudulent content</li>
@@ -81,7 +81,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">7. Limitation of Liability</h2>
                 <p>
-                  To the fullest extent permitted by law, RemoveBanana and its creators shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service.
+                  To the fullest extent permitted by law, Enough Aashuu and its creators shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service.
                 </p>
               </section>
 

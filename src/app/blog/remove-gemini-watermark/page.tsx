@@ -63,9 +63,9 @@ export default function RemoveGeminiWatermarkBlog() {
               <h2 className="text-3xl font-bold text-white mt-12">Step-by-Step: Remove Gemini Watermark</h2>
 
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 mt-6">
-                <h3 className="text-2xl font-semibold text-white mb-3">Step 1: Go to RemoveBanana</h3>
+                <h3 className="text-2xl font-semibold text-white mb-3">Step 1: Go to Enough Aashuu</h3>
                 <p>
-                  Open your browser and navigate to <strong>removebanana.aashuu.tech</strong>. No account or sign-up is required — the tool works instantly.
+                  Open your browser and navigate to <strong>enough.aashuu.tech</strong>. No account or sign-up is required — the tool works instantly.
                 </p>
               </div>
 

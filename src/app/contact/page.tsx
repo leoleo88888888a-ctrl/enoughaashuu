@@ -45,21 +45,21 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://github.com/codeaashu/RemoveBanana"
+              href="https://github.com/codeaashu/enoughaashuu"
               target="_blank"
               rel="noopener noreferrer"
               className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/50 transition-all group"
             >
               <Github className="w-8 h-8 mb-4 text-white group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-white mb-2">GitHub</h3>
-              <p className="text-sm text-gray-400">codeaashu/RemoveBanana</p>
+              <p className="text-sm text-gray-400">codeaashu</p>
               <p className="text-xs text-gray-500 mt-2">Report issues & contribute</p>
             </a>
 
             <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
               <Mail className="w-8 h-8 mb-4 text-green-400" />
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-sm text-gray-400">aashuu@removebanana.tech</p>
+              <p className="text-sm text-gray-400">aashuu@enough.aashuu.tech</p>
               <p className="text-xs text-gray-500 mt-2">General inquiries</p>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ export default function Contact() {
           >
             <h2 className="text-2xl font-semibold text-white mb-2">Help Us Improve</h2>
             <p className="text-gray-400">
-              RemoveBanana is a community-driven project. Your feedback directly shapes the future of the tool.
+              Enough Aashuu is a community-driven project. Your feedback directly shapes the future of the tool.
             </p>
           </motion.div>
         </div>
