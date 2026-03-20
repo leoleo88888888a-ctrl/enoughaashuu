@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "#/*": ["./src/iconlogo/*"]
     }
   },
   "include": [
@@ -30,5 +31,15 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "iconlogo/**/*"]
+  "exclude": [
+    "node_modules",
+    "src/iconlogo/routes/**",
+    "src/iconlogo/router.tsx",
+    "src/iconlogo/routeTree.gen.ts",
+    "src/iconlogo/server/**",
+    "src/iconlogo/features/editor/FeedbackButton.tsx",
+    "src/iconlogo/features/share/**",
+    "src/iconlogo/commands/share/**",
+    "src/iconlogo/queries/share/**"
+  ]
 }
