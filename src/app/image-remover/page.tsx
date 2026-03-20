@@ -148,7 +148,7 @@ export default function Home() {
                   CLEANED
                 </span>
                 <Image
-                  src="/enough.png"
+                  src="/RemoveBanana.png"
                   alt="Watermark removed output from Enough Aashuu"
                   width={768}
                   height={768}
