@@ -6,7 +6,7 @@
 					style="width: auto; height: 72px;"
 				/>
 			</a>
-<img width="1777" height="844" alt="Screenshot 2026-03-19 at 12 07 12 PM" src="https://github.com/user-attachments/assets/c2652a28-a17c-46b5-a994-7d4bf46dc07c" />
+<img width="1781" height="740" alt="enoughaashuu" src="https://github.com/user-attachments/assets/0951b6fe-d120-4ee5-9429-915f3007f1f1" />
 
 <h2 align="center"><a href="https://enough.aashuu.tech/"><strong>✦ enough.aashuu.tech ✦</strong></a></h2>
 
