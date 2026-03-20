@@ -71,14 +71,14 @@ export function AppShell({
             <Tooltip delay={300}>
               <Tooltip.Trigger>
                 <a
-                  href="https://webbin.dev?ref=iconlogo.dev"
+                  href="https://removebanana.aashuu.tech/"
                   target="_blank"
                   rel="noreferrer"
-                  data-umami-event="click webbin"
+                  data-umami-event="click removebanana"
                 >
                   <img
-                    src="https://storage.webbin.dev/images/webbin.png"
-                    alt="Webbin"
+                    src="/Banana.webp"
+                    alt="RemoveBanana"
                     width={40}
                     height={40}
                     className="rounded-xl border-2 dark:border"
@@ -86,28 +86,12 @@ export function AppShell({
                 </a>
               </Tooltip.Trigger>
               <Tooltip.Content>
-                <p>Discover the best AI web designs.</p>
+                <p>Discover the other tools.</p>
               </Tooltip.Content>
             </Tooltip>
           </motion.div>
           <motion.div variants={itemVariants}>
             <CollectionsButton />
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <a
-              href="https://peerlist.io/aashuu/project/removebanana"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block"
-              data-umami-event="click peerlist"
-              data-umami-event-source="editor"
-            >
-              <img
-                src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
-                alt="RemoveBanana"
-                style={{ width: "auto", height: "72px" }}
-              />
-            </a>
           </motion.div>
         </motion.div>
       </div>

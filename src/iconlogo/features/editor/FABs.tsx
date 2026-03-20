@@ -2,15 +2,14 @@ import { LogoGithub } from "@gravity-ui/icons";
 import { Button, Tooltip } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion, type Variants } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { trackEvent } from "#/lib/analytics";
 import { useChangelogStatus } from "#/queries/changelog/use-changelog-status";
 import { InfoModal } from "./InfoModal";
 
-const FEEDBACK_URL = "https://x.com/monawwarx";
-const DISCORD_URL = "https://discord.gg/qjxWBqtYZu";
-const YOUTUBE_URL = "https://youtube.com/@monawwar";
-const KOFI_URL = "https://ko-fi.com/monawwar";
+const FEEDBACK_URL = "https://x.com/warrioraashuu";
+const ICECREAM_URL = "https://buymeacoffee.com/aashuu";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -69,7 +68,7 @@ export function FABs() {
         </Tooltip>
       </motion.div>
 
-      <motion.div variants={itemVariants}>
+      {/* <motion.div variants={itemVariants}>
         <Tooltip delay={0}>
           <Tooltip.Trigger>
             <a href={DISCORD_URL} target="_blank" rel="noreferrer" data-umami-event="click discord link">
@@ -82,9 +81,9 @@ export function FABs() {
             <p>Share your feedback</p>
           </Tooltip.Content>
         </Tooltip>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div variants={itemVariants}>
+      {/* <motion.div variants={itemVariants}>
         <Tooltip delay={0}>
           <Tooltip.Trigger>
             <a href={YOUTUBE_URL} target="_blank" rel="noreferrer" data-umami-event="click youtube link">
@@ -97,13 +96,13 @@ export function FABs() {
             <p>YouTube</p>
           </Tooltip.Content>
         </Tooltip>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div variants={itemVariants}>
         <Tooltip delay={0}>
           <Tooltip.Trigger>
             <a
-              href="https://github.com/mxvsh/iconlogo"
+              href="https://github.com/codeaashu/RemoveBanana"
               target="_blank"
               rel="noreferrer"
               data-umami-event="click github link"
@@ -144,15 +143,21 @@ export function FABs() {
       <motion.div variants={itemVariants}>
         <Tooltip delay={0}>
           <Tooltip.Trigger>
-            <a href={KOFI_URL} target="_blank" rel="noreferrer" data-umami-event="click kofi link">
-              <Button variant="outline" aria-label="Support on Ko-fi">
-                <Icon icon="simple-icons:kofi" width={12} height={12} />
-                Support on Ko-fi
+            <a href={ICECREAM_URL} target="_blank" rel="noreferrer" data-umami-event="click icecream link">
+              <Button variant="outline" aria-label="Support on Buy Me a Coffee">
+                <Image
+                  src="/Soft Ice Cream.webp"
+                  alt="Icecream"
+                  width={12}
+                  height={12}
+                  className="h-3 w-3"
+                />
+                Fuel my icecream obsession
               </Button>
             </a>
           </Tooltip.Trigger>
           <Tooltip.Content placement="left">
-            <p>Support on Ko-fi</p>
+            <p>Support with icecream</p>
           </Tooltip.Content>
         </Tooltip>
       </motion.div>
