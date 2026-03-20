@@ -95,14 +95,18 @@ export function AppShell({
           </motion.div>
           <motion.div variants={itemVariants}>
             <a
-              href="https://www.producthunt.com/products/iconlogo?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-iconlogo"
+              href="https://peerlist.io/aashuu/project/removebanana"
               target="_blank"
-              rel="noopener noreferrer"
-              className="ph-glow inline-block"
-              data-umami-event="click producthunt"
+              rel="noreferrer"
+              className="inline-block"
+              data-umami-event="click peerlist"
               data-umami-event-source="editor"
             >
-              <img alt="IconLogo - Generate clean, export-ready logos from icons in seconds. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1101768&amp;theme=dark&amp;t=1773894483224" />
+              <img
+                src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
+                alt="RemoveBanana"
+                style={{ width: "auto", height: "72px" }}
+              />
             </a>
           </motion.div>
         </motion.div>

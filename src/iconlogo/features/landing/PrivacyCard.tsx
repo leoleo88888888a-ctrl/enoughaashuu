@@ -17,7 +17,7 @@ export function PrivacyCard() {
       </div>
 
       <a
-        href="https://github.com/monawwar/iconlogo.dev"
+        href="https://github.com/codeaashu/RemoveBanana"
         target="_blank"
         rel="noreferrer"
       >

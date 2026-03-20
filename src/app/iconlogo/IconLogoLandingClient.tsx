@@ -9,9 +9,7 @@ export default function IconLogoLandingClient() {
     <TanStackQueryProvider>
       <main className="min-h-screen bg-black text-white overflow-x-hidden">
         <TopNavbar />
-        <div className="pt-16">
-          <LandingPage />
-        </div>
+        <LandingPage />
       </main>
     </TanStackQueryProvider>
   );
