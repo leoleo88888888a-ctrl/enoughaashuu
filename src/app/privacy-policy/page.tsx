@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">6. Contact Us</h2>
                 <p>
-                  If you have privacy concerns, reach out to us via our contact page or on X @warrioraashuu.
+                  If you have privacy concerns, reach out to us via our contact page or on X @enoughaashuu.
                 </p>
               </section>
             </div>

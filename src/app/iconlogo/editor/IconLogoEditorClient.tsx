@@ -6,13 +6,45 @@ import { sanitizeLogoState } from "@/iconlogo/domain/logo/logo.validators";
 import TanStackQueryProvider from "@/iconlogo/integrations/tanstack-query/root-provider";
 import { AppShell } from "@/iconlogo/features/editor/AppShell";
 
+const DEFAULT_PRESET_SHARE_ID = "QMfIxW";
+const LOGO_STORE_KEY = "iconlogo-state";
+
 export default function IconLogoEditorClient() {
   const [sharedLogo, setSharedLogo] = useState<LogoState | null>(null);
 
   useEffect(() => {
     const resolveSharedLogo = async () => {
       const raw = new URLSearchParams(window.location.search).get("s");
-      if (!raw) return;
+      if (!raw) {
+        // On first-ever open, start from the curated preset.
+        if (!window.localStorage.getItem(LOGO_STORE_KEY)) {
+          try {
+            const response = await fetch(
+              `/api/iconlogo/share/${DEFAULT_PRESET_SHARE_ID}`,
+              {
+                method: "GET",
+                cache: "no-store",
+              },
+            );
+
+            if (!response.ok) {
+              setSharedLogo(null);
+              return;
+            }
+
+            const data = (await response.json()) as { logo?: unknown };
+            if (!data.logo) {
+              setSharedLogo(null);
+              return;
+            }
+
+            setSharedLogo(sanitizeLogoState(data.logo));
+          } catch {
+            setSharedLogo(null);
+          }
+        }
+        return;
+      }
 
       // New format: short id, e.g. ?s=fsfOMX
       if (/^[A-Za-z0-9_-]{4,16}$/.test(raw)) {

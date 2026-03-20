@@ -33,14 +33,14 @@ export default function Contact() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
           >
             <a
-              href="https://x.com/warrioraashuu"
+              href="https://x.com/enoughaashuu"
               target="_blank"
               rel="noopener noreferrer"
               className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 transition-all group"
             >
               <Twitter className="w-8 h-8 mb-4 text-blue-400 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-white mb-2">X (Twitter)</h3>
-              <p className="text-sm text-gray-400">@warrioraashuu</p>
+              <p className="text-sm text-gray-400">@enoughaashuu</p>
               <p className="text-xs text-gray-500 mt-2">Fastest response</p>
             </a>
 
