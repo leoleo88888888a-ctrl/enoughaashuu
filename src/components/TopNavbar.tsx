@@ -26,7 +26,7 @@ export default function TopNavbar() {
       <div
         className={isLandingPage
           ? "max-w-6xl mx-auto px-3 sm:px-5 py-2.5 rounded-2xl border border-white/10 bg-black/55 backdrop-blur-2xl shadow-[0_10px_45px_rgba(0,0,0,0.45)] flex items-center justify-between gap-3 sm:gap-4"
-          : "max-w-7xl mx-auto px-3 sm:px-6 py-2 flex items-center justify-center gap-3 sm:gap-4"
+          : "w-full max-w-none md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-2 flex items-center justify-center gap-2 sm:gap-3"
         }
       >
         {isLandingPage && (
@@ -56,96 +56,96 @@ export default function TopNavbar() {
           }`}
         >
           {!isLandingPage && (
-            <div className="inline-flex p-1.5 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-x-auto max-w-[70vw]">
+            <div className="flex w-full flex-wrap items-center justify-between gap-1 p-1.5 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
               <Link
                 href="/"
                 aria-label="Home"
                 aria-current={isHomePage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isHomePage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-4 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isHomePage
                     ? "text-white shadow-lg bg-gradient-to-r from-slate-600 to-slate-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <House className="w-5 h-5" />
-                <span className="hidden sm:inline">Home</span>
+                <span className="hidden lg:inline">Home</span>
               </Link>
 
               <Link
                 href="/image-remover"
                 aria-label="Image Remover"
                 aria-current={isImagePage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isImagePage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isImagePage
                     ? "text-white shadow-lg bg-gradient-to-r from-blue-600 to-blue-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <ImageIcon className="w-5 h-5" />
-                <span className="hidden sm:inline">Image Remover</span>
+                <span className="hidden lg:inline">Image Remover</span>
               </Link>
 
               <Link
                 href="/video-remover"
                 aria-label="Video Remover"
                 aria-current={isVideoPage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isVideoPage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isVideoPage
                     ? "text-white shadow-lg bg-gradient-to-r from-fuchsia-600 to-fuchsia-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <Video className="w-5 h-5" />
-                <span className="hidden sm:inline">Video Remover</span>
+                <span className="hidden lg:inline">Video Remover</span>
               </Link>
 
               <Link
                 href="/background-remover"
                 aria-label="Background Remover"
                 aria-current={isBackgroundPage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isBackgroundPage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isBackgroundPage
                     ? "text-white shadow-lg bg-gradient-to-r from-emerald-600 to-teal-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <Eraser className="w-5 h-5" />
-                <span className="hidden sm:inline">BG Remover</span>
+                <span className="hidden lg:inline">BG Remover</span>
               </Link>
 
               <Link
                 href="/ai-image-detector"
                 aria-label="AI Image Detector"
                 aria-current={isAIDetectorPage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isAIDetectorPage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isAIDetectorPage
                     ? "text-white shadow-lg bg-gradient-to-r from-purple-600 to-pink-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <Brain className="w-5 h-5" />
-                <span className="hidden sm:inline">AI Detector</span>
+                <span className="hidden lg:inline">AI Detector</span>
               </Link>
 
               <Link
                 href="/qr-code-generator"
                 aria-label="QR Code Generator"
                 aria-current={isQrCodePage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isQrCodePage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isQrCodePage
                     ? "text-white shadow-lg bg-gradient-to-r from-cyan-600 to-blue-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <QrCode className="w-5 h-5" />
-                <span className="hidden sm:inline">QR Generator</span>
+                <span className="hidden lg:inline">QR Generator</span>
               </Link>
 
               <Link
                 href="/iconlogo"
                 aria-label="IconLogo"
                 aria-current={isIconLogoPage ? "page" : undefined}
-                className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isIconLogoPage
+                className={`relative flex flex-1 min-w-0 items-center justify-center gap-0 md:gap-2 px-2 md:px-5 py-2.5 rounded-xl text-sm transition-all duration-300 whitespace-nowrap ${isIconLogoPage
                     ? "text-white shadow-lg bg-gradient-to-r from-orange-600 to-amber-500"
                     : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                   }`}
               >
                 <Shapes className="w-5 h-5" />
-                <span className="hidden sm:inline">IconLogo</span>
+                <span className="hidden lg:inline">IconLogo</span>
               </Link>
             </div>
           )}

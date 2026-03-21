@@ -60,7 +60,7 @@ export function HeroSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500" />
             </span>
-            Supports: 300k+ Icons • SVG • PNG • ICO
+            Supports: 300,000+ Icons • SVG • PNG • ICO
           </div>
         </motion.div>
 
