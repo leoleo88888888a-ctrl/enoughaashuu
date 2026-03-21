@@ -17,14 +17,9 @@ export function loadLogoFromState(logo: LogoState) {
     d.iconBorderWidth = logo.iconBorderWidth;
     d.iconSize = logo.iconSize;
     d.iconRotation = logo.iconRotation;
-    d.iconOffsetX = logo.iconOffsetX;
-    d.iconOffsetY = logo.iconOffsetY;
     d.background = logo.background;
     d.borderRadius = logo.borderRadius;
     d.borderWidth = logo.borderWidth;
     d.borderColor = logo.borderColor;
-    d.textMode = logo.textMode;
-    d.logoText = logo.logoText;
-    d.fontFamily = logo.fontFamily;
   });
 }
