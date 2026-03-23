@@ -39,19 +39,12 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="flex flex-col items-center"
         >
-          <a
-            href="https://peerlist.io/aashuu/project/enough-aashuu"
-            target="_blank"
-            rel="noreferrer"
-            className="mb-4"
-            aria-label="Enough Aashuu on Peerlist"
-            data-umami-event="click peerlist"
-            data-umami-event-source="iconlogo"
-          >
+          <a href="https://peerlist.io/aashuu/project/enough-aashuu" target="_blank" rel="noreferrer">
             <img
-              src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
+              src="https://dqy38fnwh4fqs.cloudfront.net/website/project-spotlight/project-week-rank-one-dark.svg"
               alt="enough aashuu"
-              style={{ width: "auto", height: "72px" }}
+              style={{ width: "auto", height: "64px" }}
+              className="mb-4"
             />
           </a>
 
