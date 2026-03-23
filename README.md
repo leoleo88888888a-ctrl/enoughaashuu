@@ -5,7 +5,7 @@
 			  alt="enough aashuu"
 			  style="width: auto; height: 64px;"
 			/>
-		  </a>
+		  </a><br>
 <a href="https://peerlist.io/aashuu/project/enough-aashuu" target="_blank" rel="noreferrer">
 				<img
 					src="https://peerlist.io/api/v1/projects/embed/PRJHNN7JQ6QA9KKLJ1OA9AK8O9AQP8?showUpvote=true&theme=dark"
